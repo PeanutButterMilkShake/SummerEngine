@@ -1,0 +1,7 @@
+[Voxel]
+name red
+color 1 0 0
+
+[Voxel]
+name blue
+color 0 0 1

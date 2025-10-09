@@ -1,0 +1,3 @@
+D:/GUSEProjects/GUSEGraphicsEngine/build/CMakeFiles/Engine.dir
+D:/GUSEProjects/GUSEGraphicsEngine/build/CMakeFiles/edit_cache.dir
+D:/GUSEProjects/GUSEGraphicsEngine/build/CMakeFiles/rebuild_cache.dir

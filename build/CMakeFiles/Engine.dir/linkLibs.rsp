@@ -1,0 +1,1 @@
+ D:/GUSEProjects/GUSEGraphicsEngine/lib/libglfw3.a -lopengl32 -lglu32 -static-libgcc -static-libstdc++ -lgdi32 -luser32 -lkernel32 -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

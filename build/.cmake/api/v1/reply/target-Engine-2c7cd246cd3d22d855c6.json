@@ -1,0 +1,334 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "Engine.exe"
+		},
+		{
+			"path" : "Engine.pdb"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 22,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 34,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 29,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-std=gnu++17"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 4,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Game"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Utility"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
+			]
+		},
+		{
+			"includes" : 
+			[
+				{
+					"backtrace" : 4,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Game"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Utility"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				13
+			]
+		}
+	],
+	"id" : "Engine::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\GUSEProjects\\GUSEGraphicsEngine\\lib\\libglfw3.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-lopengl32",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-lglu32",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-static-libgcc",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-static-libstdc++",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "-lgdi32",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "-luser32",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "-lkernel32",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "Engine",
+	"nameOnDisk" : "Engine.exe",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Core/Engine.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Core/Input.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Core/Utility/FileReader.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Core/Utility/Utility.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Game/FlyCamera.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Graphics/EBO.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Graphics/Shader.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Graphics/VAO.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Graphics/VBO.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Scene/Camera.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Scene/Mesh.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Scene/Object.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/main.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/GUSEVE/Core/glad.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}
