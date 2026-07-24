@@ -248,6 +248,30 @@ src/GUSEVE/Core/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Engine.dir\build.make CMakeFiles/Engine.dir/src/GUSEVE/Core/glad.c.s
 .PHONY : src/GUSEVE/Core/glad.c.s
 
+src/GUSEVE/Game/Chunk.obj: src/GUSEVE/Game/Chunk.cpp.obj
+.PHONY : src/GUSEVE/Game/Chunk.obj
+
+# target to build an object file
+src/GUSEVE/Game/Chunk.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Engine.dir\build.make CMakeFiles/Engine.dir/src/GUSEVE/Game/Chunk.cpp.obj
+.PHONY : src/GUSEVE/Game/Chunk.cpp.obj
+
+src/GUSEVE/Game/Chunk.i: src/GUSEVE/Game/Chunk.cpp.i
+.PHONY : src/GUSEVE/Game/Chunk.i
+
+# target to preprocess a source file
+src/GUSEVE/Game/Chunk.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Engine.dir\build.make CMakeFiles/Engine.dir/src/GUSEVE/Game/Chunk.cpp.i
+.PHONY : src/GUSEVE/Game/Chunk.cpp.i
+
+src/GUSEVE/Game/Chunk.s: src/GUSEVE/Game/Chunk.cpp.s
+.PHONY : src/GUSEVE/Game/Chunk.s
+
+# target to generate assembly for a file
+src/GUSEVE/Game/Chunk.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Engine.dir\build.make CMakeFiles/Engine.dir/src/GUSEVE/Game/Chunk.cpp.s
+.PHONY : src/GUSEVE/Game/Chunk.cpp.s
+
 src/GUSEVE/Game/FlyCamera.obj: src/GUSEVE/Game/FlyCamera.cpp.obj
 .PHONY : src/GUSEVE/Game/FlyCamera.obj
 
@@ -488,6 +512,9 @@ help:
 	@echo ... src/GUSEVE/Core/glad.obj
 	@echo ... src/GUSEVE/Core/glad.i
 	@echo ... src/GUSEVE/Core/glad.s
+	@echo ... src/GUSEVE/Game/Chunk.obj
+	@echo ... src/GUSEVE/Game/Chunk.i
+	@echo ... src/GUSEVE/Game/Chunk.s
 	@echo ... src/GUSEVE/Game/FlyCamera.obj
 	@echo ... src/GUSEVE/Game/FlyCamera.i
 	@echo ... src/GUSEVE/Game/FlyCamera.s

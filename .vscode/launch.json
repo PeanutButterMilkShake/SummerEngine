@@ -2,18 +2,25 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch Engine",
+            "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/Engine.exe",
+            "preLaunchTask": "Build Project",
+            "program": "${workspaceFolder}/build/GUSEGraphicsEngine.exe",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/build",
             "environment": [],
-            "preLaunchTask": "Build Engine",
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe" 
+            "miDebuggerPath": "C:/msys64/ucrt64/bin/gdb.exe", 
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
         }
     ]
 }

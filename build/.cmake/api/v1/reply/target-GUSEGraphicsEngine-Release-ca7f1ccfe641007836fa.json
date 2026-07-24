@@ -1,0 +1,572 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "GUSEGraphicsEngine.exe"
+		},
+		{
+			"path" : "GUSEGraphicsEngine.pdb"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_options",
+			"target_link_libraries",
+			"add_dependencies",
+			"target_compile_options",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 11,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 41,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 32,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 62,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 39,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 25,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-O3 -DNDEBUG -std=gnu++17"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-O3"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GLFW"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Math"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Utility"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics/Resources"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Networking"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene/Components"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/KHR"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/glad"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/glm"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/glm/detail"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/glm/ext"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtc"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtx"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/glm/simd"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/steam"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/src"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-O3 -DNDEBUG"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-O3"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GLFW"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Math"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Utility"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics/Resources"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Networking"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene/Components"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/KHR"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/glad"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/glm"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/glm/detail"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/glm/ext"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtc"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtx"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/glm/simd"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include/steam"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/GUSEGraphicsEngine/src"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				4
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "CopyAssets::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "GUSEGraphicsEngine::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-O3 -DNDEBUG",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-static",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-static-libgcc",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-static-libstdc++",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "-lopengl32",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "-lgdi32",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "C:\\msys64\\ucrt64\\lib\\libglfw3.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "D:\\GUSEProjects\\GUSEGraphicsEngine\\lib\\steam_api.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"linkLibraries" : 
+	[
+		{
+			"backtrace" : 3,
+			"fragment" : "opengl32"
+		},
+		{
+			"backtrace" : 3,
+			"fragment" : "gdi32"
+		},
+		{
+			"backtrace" : 3,
+			"fragment" : "C:/msys64/ucrt64/lib/libglfw3.a"
+		},
+		{
+			"backtrace" : 3,
+			"fragment" : "D:/GUSEProjects/GUSEGraphicsEngine/lib/steam_api.a"
+		}
+	],
+	"name" : "GUSEGraphicsEngine",
+	"nameOnDisk" : "GUSEGraphicsEngine.exe",
+	"orderDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "CopyAssets::@6890427a1f51a3e7e1df"
+		}
+	],
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Core/Engine.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Core/Input.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Core/Utility/FileReader.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Core/Utility/Utility.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/GUSEVE/Core/glad.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Graphics/EBO.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Graphics/MaterialData.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Graphics/Renderer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Graphics/ShaderData.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Graphics/VAO.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Graphics/VBO.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Networking/NetworkManager.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Networking/Packet.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Networking/SteamTransport.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Scene/Component.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Scene/Components/Camera.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Scene/Components/Light.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Scene/Components/Mesh.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Scene/Components/RectTransform.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Scene/Components/Transform.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Scene/Components/UIImage.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/GUSEVE/Scene/Object.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/main.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

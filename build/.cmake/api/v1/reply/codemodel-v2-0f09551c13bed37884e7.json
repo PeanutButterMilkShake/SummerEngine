@@ -1,0 +1,70 @@
+{
+	"configurations" : 
+	[
+		{
+			"abstractTargets" : [],
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Release-f040eec181a89de70dbe.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "GUSE_Project",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "CopyAssets::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CopyAssets-Release-9b46c4ffe4abff7fe552.json",
+					"name" : "CopyAssets",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GUSEGraphicsEngine::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GUSEGraphicsEngine-Release-ca7f1ccfe641007836fa.json",
+					"name" : "GUSEGraphicsEngine",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/GUSEProjects/GUSEGraphicsEngine/build",
+		"source" : "D:/GUSEProjects/GUSEGraphicsEngine"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	}
+}
