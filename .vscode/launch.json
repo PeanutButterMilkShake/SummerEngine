@@ -6,7 +6,7 @@
             "type": "cppdbg",
             "request": "launch",
             "preLaunchTask": "Build Project",
-            "program": "${workspaceFolder}/build/GUSEGraphicsEngine.exe",
+            "program": "${workspaceFolder}/build/SummerEngine.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}/build",

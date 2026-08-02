@@ -31,34 +31,58 @@ struct MeshData : public Resource
         std::vector<float> interleaved;
         size_t vertexCount = vertices.size() / 3;
 
+        bool hasNormals = !normals.empty();
+        bool hasUVs = !uvs.empty();
+
         for (size_t i = 0; i < vertexCount; ++i)
         {
             // Position
-            interleaved.push_back(vertices[i*3]);
-            interleaved.push_back(vertices[i*3 + 1]);
-            interleaved.push_back(vertices[i*3 + 2]);
+            interleaved.push_back(vertices[i * 3]);
+            interleaved.push_back(vertices[i * 3 + 1]);
+            interleaved.push_back(vertices[i * 3 + 2]);
 
             // Normal
-            if (!normals.empty())
+            if (hasNormals)
             {
-                interleaved.push_back(normals[i*3]);
-                interleaved.push_back(normals[i*3 + 1]);
-                interleaved.push_back(normals[i*3 + 2]);
+                interleaved.push_back(normals[i * 3]);
+                interleaved.push_back(normals[i * 3 + 1]);
+                interleaved.push_back(normals[i * 3 + 2]);
+            }
+
+            // UV
+            if (hasUVs)
+            {
+                interleaved.push_back(uvs[i * 2]);
+                interleaved.push_back(uvs[i * 2 + 1]);
             }
         }
 
-        vbo.SetData(interleaved.data(), interleaved.size() * sizeof(float));
-        ebo.SetData(indices.data(), indices.size() * sizeof(unsigned int));
+        unsigned int strideFloats = 3;
+        if (hasNormals) strideFloats += 3;
+        if (hasUVs) strideFloats += 2;
+        GLsizei strideBytes = strideFloats * sizeof(float);
 
         vao.Bind();
-        ebo.Bind();
-        vbo.Bind();
+        vbo.SetData(interleaved.data(), interleaved.size() * sizeof(float));
+        // (Optional: You can skip ebo.SetData entirely since you aren't indexing)
 
-        vao.LinkAttrib(vbo, 0, 3, GL_FLOAT, 6 * sizeof(float), (void*)0); // Position
-        vao.LinkAttrib(vbo, 1, 3, GL_FLOAT, 6 * sizeof(float), (void*)(3 * sizeof(float))); // Normal
+        size_t offset = 0;
+        vao.LinkAttrib(vbo, 0, 3, GL_FLOAT, strideBytes, (void*)offset);
+        offset += 3 * sizeof(float);
 
-        vbo.Unbind();
+        if (hasNormals)
+        {
+            vao.LinkAttrib(vbo, 1, 3, GL_FLOAT, strideBytes, (void*)offset);
+            offset += 3 * sizeof(float);
+        }
+
+        if (hasUVs)
+        {
+            vao.LinkAttrib(vbo, 2, 2, GL_FLOAT, strideBytes, (void*)offset);
+            offset += 2 * sizeof(float);
+        }
+
         vao.Unbind();
+        vbo.Unbind();
     }
-
 };

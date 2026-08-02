@@ -14,17 +14,14 @@ void VBO::SetData(const void* data, GLsizeiptr size)
 {
     glBindBuffer(GL_ARRAY_BUFFER, id);
     glBufferData(GL_ARRAY_BUFFER, size, data, GL_STATIC_DRAW);
-    CheckOpenGLError("Setting VBO data");
 }
 
 void VBO::Bind() const
 {
     glBindBuffer(GL_ARRAY_BUFFER, id);
-    CheckOpenGLError("Binding VBO");
 }
 
 void VBO::Unbind() const
 {
     glBindBuffer(GL_ARRAY_BUFFER, 0);
-    CheckOpenGLError("Unbinding VBO");
 }

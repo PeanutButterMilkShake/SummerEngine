@@ -11,8 +11,8 @@
 # =============================================================================
 
 # =============================================================================
-# Project: GUSE_Project
-# Configurations: Release
+# Project: SummerEngine_Project
+# Configurations: Debug
 # =============================================================================
 
 #############################################
@@ -24,7 +24,7 @@ ninja_required_version = 1.8
 #############################################
 # Set configuration variable for custom commands.
 
-CONFIGURATION = Release
+CONFIGURATION = Debug
 # =============================================================================
 # Include auxiliary files.
 
@@ -39,243 +39,279 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = D$:/GUSEProjects/GUSEGraphicsEngine/build/
+cmake_ninja_workdir = D$:/GUSEProjects/SummerEngine/build/
 # =============================================================================
-# Object build statements for EXECUTABLE target GUSEGraphicsEngine
+# Object build statements for EXECUTABLE target SummerEngine
 
 
 #############################################
-# Order-only phony target for GUSEGraphicsEngine
+# Order-only phony target for SummerEngine
 
-build cmake_object_order_depends_target_GUSEGraphicsEngine: phony || CopyAssets
+build cmake_object_order_depends_target_SummerEngine: phony || CopyAssets
 
-build CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Core/Engine.cpp.obj: CXX_COMPILER__GUSEGraphicsEngine_unscanned_Release D$:/GUSEProjects/GUSEGraphicsEngine/src/GUSEVE/Core/Engine.cpp || cmake_object_order_depends_target_GUSEGraphicsEngine
-  CONFIG = Release
-  DEP_FILE = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Core\Engine.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17 -O3
-  INCLUDES = -ID:/GUSEProjects/GUSEGraphicsEngine/include/GLFW -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Math -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Utility -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics/Resources -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Networking -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene/Components -ID:/GUSEProjects/GUSEGraphicsEngine/include/KHR -ID:/GUSEProjects/GUSEGraphicsEngine/include/glad -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/detail -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/ext -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtc -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtx -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/simd -ID:/GUSEProjects/GUSEGraphicsEngine/include/steam -ID:/GUSEProjects/GUSEGraphicsEngine/include -ID:/GUSEProjects/GUSEGraphicsEngine/src
-  OBJECT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Core
-  TARGET_SUPPORT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
+build CMakeFiles/SummerEngine.dir/src/SummerEngine/Core/Engine.cpp.obj: CXX_COMPILER__SummerEngine_unscanned_Debug D$:/GUSEProjects/SummerEngine/src/SummerEngine/Core/Engine.cpp || cmake_object_order_depends_target_SummerEngine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SummerEngine.dir\src\SummerEngine\Core\Engine.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -O3
+  INCLUDES = -ID:/GUSEProjects/SummerEngine/include/GLFW -ID:/GUSEProjects/SummerEngine/include/KHR -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Networking -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components -ID:/GUSEProjects/SummerEngine/include/glad -ID:/GUSEProjects/SummerEngine/include/glm -ID:/GUSEProjects/SummerEngine/include/glm/detail -ID:/GUSEProjects/SummerEngine/include/glm/ext -ID:/GUSEProjects/SummerEngine/include/glm/gtc -ID:/GUSEProjects/SummerEngine/include/glm/gtx -ID:/GUSEProjects/SummerEngine/include/glm/simd -ID:/GUSEProjects/SummerEngine/include/steam -ID:/GUSEProjects/SummerEngine/include -ID:/GUSEProjects/SummerEngine/src -ID:/GUSEProjects/SummerEngine/lib
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SummerEngine.dir\src\SummerEngine\Core
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
 
-build CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Core/Input.cpp.obj: CXX_COMPILER__GUSEGraphicsEngine_unscanned_Release D$:/GUSEProjects/GUSEGraphicsEngine/src/GUSEVE/Core/Input.cpp || cmake_object_order_depends_target_GUSEGraphicsEngine
-  CONFIG = Release
-  DEP_FILE = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Core\Input.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17 -O3
-  INCLUDES = -ID:/GUSEProjects/GUSEGraphicsEngine/include/GLFW -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Math -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Utility -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics/Resources -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Networking -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene/Components -ID:/GUSEProjects/GUSEGraphicsEngine/include/KHR -ID:/GUSEProjects/GUSEGraphicsEngine/include/glad -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/detail -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/ext -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtc -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtx -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/simd -ID:/GUSEProjects/GUSEGraphicsEngine/include/steam -ID:/GUSEProjects/GUSEGraphicsEngine/include -ID:/GUSEProjects/GUSEGraphicsEngine/src
-  OBJECT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Core
-  TARGET_SUPPORT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
+build CMakeFiles/SummerEngine.dir/src/SummerEngine/Core/EnginePanel.cpp.obj: CXX_COMPILER__SummerEngine_unscanned_Debug D$:/GUSEProjects/SummerEngine/src/SummerEngine/Core/EnginePanel.cpp || cmake_object_order_depends_target_SummerEngine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SummerEngine.dir\src\SummerEngine\Core\EnginePanel.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -O3
+  INCLUDES = -ID:/GUSEProjects/SummerEngine/include/GLFW -ID:/GUSEProjects/SummerEngine/include/KHR -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Networking -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components -ID:/GUSEProjects/SummerEngine/include/glad -ID:/GUSEProjects/SummerEngine/include/glm -ID:/GUSEProjects/SummerEngine/include/glm/detail -ID:/GUSEProjects/SummerEngine/include/glm/ext -ID:/GUSEProjects/SummerEngine/include/glm/gtc -ID:/GUSEProjects/SummerEngine/include/glm/gtx -ID:/GUSEProjects/SummerEngine/include/glm/simd -ID:/GUSEProjects/SummerEngine/include/steam -ID:/GUSEProjects/SummerEngine/include -ID:/GUSEProjects/SummerEngine/src -ID:/GUSEProjects/SummerEngine/lib
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SummerEngine.dir\src\SummerEngine\Core
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
 
-build CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Core/Utility/FileReader.cpp.obj: CXX_COMPILER__GUSEGraphicsEngine_unscanned_Release D$:/GUSEProjects/GUSEGraphicsEngine/src/GUSEVE/Core/Utility/FileReader.cpp || cmake_object_order_depends_target_GUSEGraphicsEngine
-  CONFIG = Release
-  DEP_FILE = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Core\Utility\FileReader.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17 -O3
-  INCLUDES = -ID:/GUSEProjects/GUSEGraphicsEngine/include/GLFW -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Math -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Utility -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics/Resources -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Networking -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene/Components -ID:/GUSEProjects/GUSEGraphicsEngine/include/KHR -ID:/GUSEProjects/GUSEGraphicsEngine/include/glad -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/detail -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/ext -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtc -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtx -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/simd -ID:/GUSEProjects/GUSEGraphicsEngine/include/steam -ID:/GUSEProjects/GUSEGraphicsEngine/include -ID:/GUSEProjects/GUSEGraphicsEngine/src
-  OBJECT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Core\Utility
-  TARGET_SUPPORT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
+build CMakeFiles/SummerEngine.dir/src/SummerEngine/Core/EngineUI.cpp.obj: CXX_COMPILER__SummerEngine_unscanned_Debug D$:/GUSEProjects/SummerEngine/src/SummerEngine/Core/EngineUI.cpp || cmake_object_order_depends_target_SummerEngine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SummerEngine.dir\src\SummerEngine\Core\EngineUI.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -O3
+  INCLUDES = -ID:/GUSEProjects/SummerEngine/include/GLFW -ID:/GUSEProjects/SummerEngine/include/KHR -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Networking -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components -ID:/GUSEProjects/SummerEngine/include/glad -ID:/GUSEProjects/SummerEngine/include/glm -ID:/GUSEProjects/SummerEngine/include/glm/detail -ID:/GUSEProjects/SummerEngine/include/glm/ext -ID:/GUSEProjects/SummerEngine/include/glm/gtc -ID:/GUSEProjects/SummerEngine/include/glm/gtx -ID:/GUSEProjects/SummerEngine/include/glm/simd -ID:/GUSEProjects/SummerEngine/include/steam -ID:/GUSEProjects/SummerEngine/include -ID:/GUSEProjects/SummerEngine/src -ID:/GUSEProjects/SummerEngine/lib
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SummerEngine.dir\src\SummerEngine\Core
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
 
-build CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Core/Utility/Utility.cpp.obj: CXX_COMPILER__GUSEGraphicsEngine_unscanned_Release D$:/GUSEProjects/GUSEGraphicsEngine/src/GUSEVE/Core/Utility/Utility.cpp || cmake_object_order_depends_target_GUSEGraphicsEngine
-  CONFIG = Release
-  DEP_FILE = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Core\Utility\Utility.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17 -O3
-  INCLUDES = -ID:/GUSEProjects/GUSEGraphicsEngine/include/GLFW -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Math -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Utility -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics/Resources -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Networking -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene/Components -ID:/GUSEProjects/GUSEGraphicsEngine/include/KHR -ID:/GUSEProjects/GUSEGraphicsEngine/include/glad -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/detail -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/ext -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtc -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtx -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/simd -ID:/GUSEProjects/GUSEGraphicsEngine/include/steam -ID:/GUSEProjects/GUSEGraphicsEngine/include -ID:/GUSEProjects/GUSEGraphicsEngine/src
-  OBJECT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Core\Utility
-  TARGET_SUPPORT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
+build CMakeFiles/SummerEngine.dir/src/SummerEngine/Core/Input.cpp.obj: CXX_COMPILER__SummerEngine_unscanned_Debug D$:/GUSEProjects/SummerEngine/src/SummerEngine/Core/Input.cpp || cmake_object_order_depends_target_SummerEngine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SummerEngine.dir\src\SummerEngine\Core\Input.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -O3
+  INCLUDES = -ID:/GUSEProjects/SummerEngine/include/GLFW -ID:/GUSEProjects/SummerEngine/include/KHR -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Networking -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components -ID:/GUSEProjects/SummerEngine/include/glad -ID:/GUSEProjects/SummerEngine/include/glm -ID:/GUSEProjects/SummerEngine/include/glm/detail -ID:/GUSEProjects/SummerEngine/include/glm/ext -ID:/GUSEProjects/SummerEngine/include/glm/gtc -ID:/GUSEProjects/SummerEngine/include/glm/gtx -ID:/GUSEProjects/SummerEngine/include/glm/simd -ID:/GUSEProjects/SummerEngine/include/steam -ID:/GUSEProjects/SummerEngine/include -ID:/GUSEProjects/SummerEngine/src -ID:/GUSEProjects/SummerEngine/lib
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SummerEngine.dir\src\SummerEngine\Core
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
 
-build CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Core/glad.c.obj: C_COMPILER__GUSEGraphicsEngine_unscanned_Release D$:/GUSEProjects/GUSEGraphicsEngine/src/GUSEVE/Core/glad.c || cmake_object_order_depends_target_GUSEGraphicsEngine
-  CONFIG = Release
-  DEP_FILE = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Core\glad.c.obj.d
-  FLAGS = -O3 -DNDEBUG -O3
-  INCLUDES = -ID:/GUSEProjects/GUSEGraphicsEngine/include/GLFW -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Math -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Utility -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics/Resources -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Networking -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene/Components -ID:/GUSEProjects/GUSEGraphicsEngine/include/KHR -ID:/GUSEProjects/GUSEGraphicsEngine/include/glad -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/detail -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/ext -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtc -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtx -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/simd -ID:/GUSEProjects/GUSEGraphicsEngine/include/steam -ID:/GUSEProjects/GUSEGraphicsEngine/include -ID:/GUSEProjects/GUSEGraphicsEngine/src
-  OBJECT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Core
-  TARGET_SUPPORT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
+build CMakeFiles/SummerEngine.dir/src/SummerEngine/Core/Utility/FileReader.cpp.obj: CXX_COMPILER__SummerEngine_unscanned_Debug D$:/GUSEProjects/SummerEngine/src/SummerEngine/Core/Utility/FileReader.cpp || cmake_object_order_depends_target_SummerEngine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SummerEngine.dir\src\SummerEngine\Core\Utility\FileReader.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -O3
+  INCLUDES = -ID:/GUSEProjects/SummerEngine/include/GLFW -ID:/GUSEProjects/SummerEngine/include/KHR -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Networking -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components -ID:/GUSEProjects/SummerEngine/include/glad -ID:/GUSEProjects/SummerEngine/include/glm -ID:/GUSEProjects/SummerEngine/include/glm/detail -ID:/GUSEProjects/SummerEngine/include/glm/ext -ID:/GUSEProjects/SummerEngine/include/glm/gtc -ID:/GUSEProjects/SummerEngine/include/glm/gtx -ID:/GUSEProjects/SummerEngine/include/glm/simd -ID:/GUSEProjects/SummerEngine/include/steam -ID:/GUSEProjects/SummerEngine/include -ID:/GUSEProjects/SummerEngine/src -ID:/GUSEProjects/SummerEngine/lib
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SummerEngine.dir\src\SummerEngine\Core\Utility
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
 
-build CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Graphics/EBO.cpp.obj: CXX_COMPILER__GUSEGraphicsEngine_unscanned_Release D$:/GUSEProjects/GUSEGraphicsEngine/src/GUSEVE/Graphics/EBO.cpp || cmake_object_order_depends_target_GUSEGraphicsEngine
-  CONFIG = Release
-  DEP_FILE = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Graphics\EBO.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17 -O3
-  INCLUDES = -ID:/GUSEProjects/GUSEGraphicsEngine/include/GLFW -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Math -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Utility -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics/Resources -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Networking -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene/Components -ID:/GUSEProjects/GUSEGraphicsEngine/include/KHR -ID:/GUSEProjects/GUSEGraphicsEngine/include/glad -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/detail -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/ext -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtc -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtx -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/simd -ID:/GUSEProjects/GUSEGraphicsEngine/include/steam -ID:/GUSEProjects/GUSEGraphicsEngine/include -ID:/GUSEProjects/GUSEGraphicsEngine/src
-  OBJECT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Graphics
-  TARGET_SUPPORT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
+build CMakeFiles/SummerEngine.dir/src/SummerEngine/Core/Utility/Utility.cpp.obj: CXX_COMPILER__SummerEngine_unscanned_Debug D$:/GUSEProjects/SummerEngine/src/SummerEngine/Core/Utility/Utility.cpp || cmake_object_order_depends_target_SummerEngine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SummerEngine.dir\src\SummerEngine\Core\Utility\Utility.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -O3
+  INCLUDES = -ID:/GUSEProjects/SummerEngine/include/GLFW -ID:/GUSEProjects/SummerEngine/include/KHR -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Networking -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components -ID:/GUSEProjects/SummerEngine/include/glad -ID:/GUSEProjects/SummerEngine/include/glm -ID:/GUSEProjects/SummerEngine/include/glm/detail -ID:/GUSEProjects/SummerEngine/include/glm/ext -ID:/GUSEProjects/SummerEngine/include/glm/gtc -ID:/GUSEProjects/SummerEngine/include/glm/gtx -ID:/GUSEProjects/SummerEngine/include/glm/simd -ID:/GUSEProjects/SummerEngine/include/steam -ID:/GUSEProjects/SummerEngine/include -ID:/GUSEProjects/SummerEngine/src -ID:/GUSEProjects/SummerEngine/lib
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SummerEngine.dir\src\SummerEngine\Core\Utility
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
 
-build CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Graphics/MaterialData.cpp.obj: CXX_COMPILER__GUSEGraphicsEngine_unscanned_Release D$:/GUSEProjects/GUSEGraphicsEngine/src/GUSEVE/Graphics/MaterialData.cpp || cmake_object_order_depends_target_GUSEGraphicsEngine
-  CONFIG = Release
-  DEP_FILE = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Graphics\MaterialData.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17 -O3
-  INCLUDES = -ID:/GUSEProjects/GUSEGraphicsEngine/include/GLFW -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Math -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Utility -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics/Resources -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Networking -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene/Components -ID:/GUSEProjects/GUSEGraphicsEngine/include/KHR -ID:/GUSEProjects/GUSEGraphicsEngine/include/glad -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/detail -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/ext -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtc -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtx -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/simd -ID:/GUSEProjects/GUSEGraphicsEngine/include/steam -ID:/GUSEProjects/GUSEGraphicsEngine/include -ID:/GUSEProjects/GUSEGraphicsEngine/src
-  OBJECT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Graphics
-  TARGET_SUPPORT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
+build CMakeFiles/SummerEngine.dir/src/SummerEngine/Core/glad.c.obj: C_COMPILER__SummerEngine_unscanned_Debug D$:/GUSEProjects/SummerEngine/src/SummerEngine/Core/glad.c || cmake_object_order_depends_target_SummerEngine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SummerEngine.dir\src\SummerEngine\Core\glad.c.obj.d
+  FLAGS = -g -O3
+  INCLUDES = -ID:/GUSEProjects/SummerEngine/include/GLFW -ID:/GUSEProjects/SummerEngine/include/KHR -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Networking -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components -ID:/GUSEProjects/SummerEngine/include/glad -ID:/GUSEProjects/SummerEngine/include/glm -ID:/GUSEProjects/SummerEngine/include/glm/detail -ID:/GUSEProjects/SummerEngine/include/glm/ext -ID:/GUSEProjects/SummerEngine/include/glm/gtc -ID:/GUSEProjects/SummerEngine/include/glm/gtx -ID:/GUSEProjects/SummerEngine/include/glm/simd -ID:/GUSEProjects/SummerEngine/include/steam -ID:/GUSEProjects/SummerEngine/include -ID:/GUSEProjects/SummerEngine/src -ID:/GUSEProjects/SummerEngine/lib
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SummerEngine.dir\src\SummerEngine\Core
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
 
-build CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Graphics/Renderer.cpp.obj: CXX_COMPILER__GUSEGraphicsEngine_unscanned_Release D$:/GUSEProjects/GUSEGraphicsEngine/src/GUSEVE/Graphics/Renderer.cpp || cmake_object_order_depends_target_GUSEGraphicsEngine
-  CONFIG = Release
-  DEP_FILE = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Graphics\Renderer.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17 -O3
-  INCLUDES = -ID:/GUSEProjects/GUSEGraphicsEngine/include/GLFW -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Math -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Utility -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics/Resources -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Networking -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene/Components -ID:/GUSEProjects/GUSEGraphicsEngine/include/KHR -ID:/GUSEProjects/GUSEGraphicsEngine/include/glad -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/detail -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/ext -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtc -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtx -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/simd -ID:/GUSEProjects/GUSEGraphicsEngine/include/steam -ID:/GUSEProjects/GUSEGraphicsEngine/include -ID:/GUSEProjects/GUSEGraphicsEngine/src
-  OBJECT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Graphics
-  TARGET_SUPPORT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
+build CMakeFiles/SummerEngine.dir/src/SummerEngine/Graphics/EBO.cpp.obj: CXX_COMPILER__SummerEngine_unscanned_Debug D$:/GUSEProjects/SummerEngine/src/SummerEngine/Graphics/EBO.cpp || cmake_object_order_depends_target_SummerEngine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SummerEngine.dir\src\SummerEngine\Graphics\EBO.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -O3
+  INCLUDES = -ID:/GUSEProjects/SummerEngine/include/GLFW -ID:/GUSEProjects/SummerEngine/include/KHR -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Networking -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components -ID:/GUSEProjects/SummerEngine/include/glad -ID:/GUSEProjects/SummerEngine/include/glm -ID:/GUSEProjects/SummerEngine/include/glm/detail -ID:/GUSEProjects/SummerEngine/include/glm/ext -ID:/GUSEProjects/SummerEngine/include/glm/gtc -ID:/GUSEProjects/SummerEngine/include/glm/gtx -ID:/GUSEProjects/SummerEngine/include/glm/simd -ID:/GUSEProjects/SummerEngine/include/steam -ID:/GUSEProjects/SummerEngine/include -ID:/GUSEProjects/SummerEngine/src -ID:/GUSEProjects/SummerEngine/lib
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SummerEngine.dir\src\SummerEngine\Graphics
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
 
-build CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Graphics/ShaderData.cpp.obj: CXX_COMPILER__GUSEGraphicsEngine_unscanned_Release D$:/GUSEProjects/GUSEGraphicsEngine/src/GUSEVE/Graphics/ShaderData.cpp || cmake_object_order_depends_target_GUSEGraphicsEngine
-  CONFIG = Release
-  DEP_FILE = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Graphics\ShaderData.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17 -O3
-  INCLUDES = -ID:/GUSEProjects/GUSEGraphicsEngine/include/GLFW -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Math -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Utility -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics/Resources -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Networking -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene/Components -ID:/GUSEProjects/GUSEGraphicsEngine/include/KHR -ID:/GUSEProjects/GUSEGraphicsEngine/include/glad -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/detail -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/ext -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtc -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtx -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/simd -ID:/GUSEProjects/GUSEGraphicsEngine/include/steam -ID:/GUSEProjects/GUSEGraphicsEngine/include -ID:/GUSEProjects/GUSEGraphicsEngine/src
-  OBJECT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Graphics
-  TARGET_SUPPORT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
+build CMakeFiles/SummerEngine.dir/src/SummerEngine/Graphics/MaterialData.cpp.obj: CXX_COMPILER__SummerEngine_unscanned_Debug D$:/GUSEProjects/SummerEngine/src/SummerEngine/Graphics/MaterialData.cpp || cmake_object_order_depends_target_SummerEngine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SummerEngine.dir\src\SummerEngine\Graphics\MaterialData.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -O3
+  INCLUDES = -ID:/GUSEProjects/SummerEngine/include/GLFW -ID:/GUSEProjects/SummerEngine/include/KHR -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Networking -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components -ID:/GUSEProjects/SummerEngine/include/glad -ID:/GUSEProjects/SummerEngine/include/glm -ID:/GUSEProjects/SummerEngine/include/glm/detail -ID:/GUSEProjects/SummerEngine/include/glm/ext -ID:/GUSEProjects/SummerEngine/include/glm/gtc -ID:/GUSEProjects/SummerEngine/include/glm/gtx -ID:/GUSEProjects/SummerEngine/include/glm/simd -ID:/GUSEProjects/SummerEngine/include/steam -ID:/GUSEProjects/SummerEngine/include -ID:/GUSEProjects/SummerEngine/src -ID:/GUSEProjects/SummerEngine/lib
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SummerEngine.dir\src\SummerEngine\Graphics
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
 
-build CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Graphics/VAO.cpp.obj: CXX_COMPILER__GUSEGraphicsEngine_unscanned_Release D$:/GUSEProjects/GUSEGraphicsEngine/src/GUSEVE/Graphics/VAO.cpp || cmake_object_order_depends_target_GUSEGraphicsEngine
-  CONFIG = Release
-  DEP_FILE = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Graphics\VAO.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17 -O3
-  INCLUDES = -ID:/GUSEProjects/GUSEGraphicsEngine/include/GLFW -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Math -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Utility -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics/Resources -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Networking -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene/Components -ID:/GUSEProjects/GUSEGraphicsEngine/include/KHR -ID:/GUSEProjects/GUSEGraphicsEngine/include/glad -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/detail -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/ext -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtc -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtx -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/simd -ID:/GUSEProjects/GUSEGraphicsEngine/include/steam -ID:/GUSEProjects/GUSEGraphicsEngine/include -ID:/GUSEProjects/GUSEGraphicsEngine/src
-  OBJECT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Graphics
-  TARGET_SUPPORT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
+build CMakeFiles/SummerEngine.dir/src/SummerEngine/Graphics/Renderer.cpp.obj: CXX_COMPILER__SummerEngine_unscanned_Debug D$:/GUSEProjects/SummerEngine/src/SummerEngine/Graphics/Renderer.cpp || cmake_object_order_depends_target_SummerEngine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SummerEngine.dir\src\SummerEngine\Graphics\Renderer.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -O3
+  INCLUDES = -ID:/GUSEProjects/SummerEngine/include/GLFW -ID:/GUSEProjects/SummerEngine/include/KHR -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Networking -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components -ID:/GUSEProjects/SummerEngine/include/glad -ID:/GUSEProjects/SummerEngine/include/glm -ID:/GUSEProjects/SummerEngine/include/glm/detail -ID:/GUSEProjects/SummerEngine/include/glm/ext -ID:/GUSEProjects/SummerEngine/include/glm/gtc -ID:/GUSEProjects/SummerEngine/include/glm/gtx -ID:/GUSEProjects/SummerEngine/include/glm/simd -ID:/GUSEProjects/SummerEngine/include/steam -ID:/GUSEProjects/SummerEngine/include -ID:/GUSEProjects/SummerEngine/src -ID:/GUSEProjects/SummerEngine/lib
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SummerEngine.dir\src\SummerEngine\Graphics
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
 
-build CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Graphics/VBO.cpp.obj: CXX_COMPILER__GUSEGraphicsEngine_unscanned_Release D$:/GUSEProjects/GUSEGraphicsEngine/src/GUSEVE/Graphics/VBO.cpp || cmake_object_order_depends_target_GUSEGraphicsEngine
-  CONFIG = Release
-  DEP_FILE = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Graphics\VBO.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17 -O3
-  INCLUDES = -ID:/GUSEProjects/GUSEGraphicsEngine/include/GLFW -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Math -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Utility -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics/Resources -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Networking -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene/Components -ID:/GUSEProjects/GUSEGraphicsEngine/include/KHR -ID:/GUSEProjects/GUSEGraphicsEngine/include/glad -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/detail -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/ext -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtc -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtx -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/simd -ID:/GUSEProjects/GUSEGraphicsEngine/include/steam -ID:/GUSEProjects/GUSEGraphicsEngine/include -ID:/GUSEProjects/GUSEGraphicsEngine/src
-  OBJECT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Graphics
-  TARGET_SUPPORT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
+build CMakeFiles/SummerEngine.dir/src/SummerEngine/Graphics/ShaderData.cpp.obj: CXX_COMPILER__SummerEngine_unscanned_Debug D$:/GUSEProjects/SummerEngine/src/SummerEngine/Graphics/ShaderData.cpp || cmake_object_order_depends_target_SummerEngine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SummerEngine.dir\src\SummerEngine\Graphics\ShaderData.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -O3
+  INCLUDES = -ID:/GUSEProjects/SummerEngine/include/GLFW -ID:/GUSEProjects/SummerEngine/include/KHR -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Networking -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components -ID:/GUSEProjects/SummerEngine/include/glad -ID:/GUSEProjects/SummerEngine/include/glm -ID:/GUSEProjects/SummerEngine/include/glm/detail -ID:/GUSEProjects/SummerEngine/include/glm/ext -ID:/GUSEProjects/SummerEngine/include/glm/gtc -ID:/GUSEProjects/SummerEngine/include/glm/gtx -ID:/GUSEProjects/SummerEngine/include/glm/simd -ID:/GUSEProjects/SummerEngine/include/steam -ID:/GUSEProjects/SummerEngine/include -ID:/GUSEProjects/SummerEngine/src -ID:/GUSEProjects/SummerEngine/lib
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SummerEngine.dir\src\SummerEngine\Graphics
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
 
-build CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Networking/NetworkManager.cpp.obj: CXX_COMPILER__GUSEGraphicsEngine_unscanned_Release D$:/GUSEProjects/GUSEGraphicsEngine/src/GUSEVE/Networking/NetworkManager.cpp || cmake_object_order_depends_target_GUSEGraphicsEngine
-  CONFIG = Release
-  DEP_FILE = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Networking\NetworkManager.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17 -O3
-  INCLUDES = -ID:/GUSEProjects/GUSEGraphicsEngine/include/GLFW -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Math -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Utility -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics/Resources -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Networking -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene/Components -ID:/GUSEProjects/GUSEGraphicsEngine/include/KHR -ID:/GUSEProjects/GUSEGraphicsEngine/include/glad -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/detail -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/ext -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtc -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtx -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/simd -ID:/GUSEProjects/GUSEGraphicsEngine/include/steam -ID:/GUSEProjects/GUSEGraphicsEngine/include -ID:/GUSEProjects/GUSEGraphicsEngine/src
-  OBJECT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Networking
-  TARGET_SUPPORT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
+build CMakeFiles/SummerEngine.dir/src/SummerEngine/Graphics/VAO.cpp.obj: CXX_COMPILER__SummerEngine_unscanned_Debug D$:/GUSEProjects/SummerEngine/src/SummerEngine/Graphics/VAO.cpp || cmake_object_order_depends_target_SummerEngine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SummerEngine.dir\src\SummerEngine\Graphics\VAO.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -O3
+  INCLUDES = -ID:/GUSEProjects/SummerEngine/include/GLFW -ID:/GUSEProjects/SummerEngine/include/KHR -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Networking -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components -ID:/GUSEProjects/SummerEngine/include/glad -ID:/GUSEProjects/SummerEngine/include/glm -ID:/GUSEProjects/SummerEngine/include/glm/detail -ID:/GUSEProjects/SummerEngine/include/glm/ext -ID:/GUSEProjects/SummerEngine/include/glm/gtc -ID:/GUSEProjects/SummerEngine/include/glm/gtx -ID:/GUSEProjects/SummerEngine/include/glm/simd -ID:/GUSEProjects/SummerEngine/include/steam -ID:/GUSEProjects/SummerEngine/include -ID:/GUSEProjects/SummerEngine/src -ID:/GUSEProjects/SummerEngine/lib
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SummerEngine.dir\src\SummerEngine\Graphics
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
 
-build CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Networking/Packet.cpp.obj: CXX_COMPILER__GUSEGraphicsEngine_unscanned_Release D$:/GUSEProjects/GUSEGraphicsEngine/src/GUSEVE/Networking/Packet.cpp || cmake_object_order_depends_target_GUSEGraphicsEngine
-  CONFIG = Release
-  DEP_FILE = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Networking\Packet.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17 -O3
-  INCLUDES = -ID:/GUSEProjects/GUSEGraphicsEngine/include/GLFW -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Math -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Utility -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics/Resources -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Networking -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene/Components -ID:/GUSEProjects/GUSEGraphicsEngine/include/KHR -ID:/GUSEProjects/GUSEGraphicsEngine/include/glad -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/detail -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/ext -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtc -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtx -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/simd -ID:/GUSEProjects/GUSEGraphicsEngine/include/steam -ID:/GUSEProjects/GUSEGraphicsEngine/include -ID:/GUSEProjects/GUSEGraphicsEngine/src
-  OBJECT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Networking
-  TARGET_SUPPORT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
+build CMakeFiles/SummerEngine.dir/src/SummerEngine/Graphics/VBO.cpp.obj: CXX_COMPILER__SummerEngine_unscanned_Debug D$:/GUSEProjects/SummerEngine/src/SummerEngine/Graphics/VBO.cpp || cmake_object_order_depends_target_SummerEngine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SummerEngine.dir\src\SummerEngine\Graphics\VBO.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -O3
+  INCLUDES = -ID:/GUSEProjects/SummerEngine/include/GLFW -ID:/GUSEProjects/SummerEngine/include/KHR -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Networking -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components -ID:/GUSEProjects/SummerEngine/include/glad -ID:/GUSEProjects/SummerEngine/include/glm -ID:/GUSEProjects/SummerEngine/include/glm/detail -ID:/GUSEProjects/SummerEngine/include/glm/ext -ID:/GUSEProjects/SummerEngine/include/glm/gtc -ID:/GUSEProjects/SummerEngine/include/glm/gtx -ID:/GUSEProjects/SummerEngine/include/glm/simd -ID:/GUSEProjects/SummerEngine/include/steam -ID:/GUSEProjects/SummerEngine/include -ID:/GUSEProjects/SummerEngine/src -ID:/GUSEProjects/SummerEngine/lib
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SummerEngine.dir\src\SummerEngine\Graphics
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
 
-build CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Networking/SteamTransport.cpp.obj: CXX_COMPILER__GUSEGraphicsEngine_unscanned_Release D$:/GUSEProjects/GUSEGraphicsEngine/src/GUSEVE/Networking/SteamTransport.cpp || cmake_object_order_depends_target_GUSEGraphicsEngine
-  CONFIG = Release
-  DEP_FILE = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Networking\SteamTransport.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17 -O3
-  INCLUDES = -ID:/GUSEProjects/GUSEGraphicsEngine/include/GLFW -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Math -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Utility -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics/Resources -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Networking -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene/Components -ID:/GUSEProjects/GUSEGraphicsEngine/include/KHR -ID:/GUSEProjects/GUSEGraphicsEngine/include/glad -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/detail -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/ext -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtc -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtx -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/simd -ID:/GUSEProjects/GUSEGraphicsEngine/include/steam -ID:/GUSEProjects/GUSEGraphicsEngine/include -ID:/GUSEProjects/GUSEGraphicsEngine/src
-  OBJECT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Networking
-  TARGET_SUPPORT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
+build CMakeFiles/SummerEngine.dir/src/SummerEngine/Graphics/stb_image.cpp.obj: CXX_COMPILER__SummerEngine_unscanned_Debug D$:/GUSEProjects/SummerEngine/src/SummerEngine/Graphics/stb_image.cpp || cmake_object_order_depends_target_SummerEngine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SummerEngine.dir\src\SummerEngine\Graphics\stb_image.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -O3
+  INCLUDES = -ID:/GUSEProjects/SummerEngine/include/GLFW -ID:/GUSEProjects/SummerEngine/include/KHR -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Networking -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components -ID:/GUSEProjects/SummerEngine/include/glad -ID:/GUSEProjects/SummerEngine/include/glm -ID:/GUSEProjects/SummerEngine/include/glm/detail -ID:/GUSEProjects/SummerEngine/include/glm/ext -ID:/GUSEProjects/SummerEngine/include/glm/gtc -ID:/GUSEProjects/SummerEngine/include/glm/gtx -ID:/GUSEProjects/SummerEngine/include/glm/simd -ID:/GUSEProjects/SummerEngine/include/steam -ID:/GUSEProjects/SummerEngine/include -ID:/GUSEProjects/SummerEngine/src -ID:/GUSEProjects/SummerEngine/lib
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SummerEngine.dir\src\SummerEngine\Graphics
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
 
-build CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Scene/Component.cpp.obj: CXX_COMPILER__GUSEGraphicsEngine_unscanned_Release D$:/GUSEProjects/GUSEGraphicsEngine/src/GUSEVE/Scene/Component.cpp || cmake_object_order_depends_target_GUSEGraphicsEngine
-  CONFIG = Release
-  DEP_FILE = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Scene\Component.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17 -O3
-  INCLUDES = -ID:/GUSEProjects/GUSEGraphicsEngine/include/GLFW -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Math -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Utility -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics/Resources -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Networking -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene/Components -ID:/GUSEProjects/GUSEGraphicsEngine/include/KHR -ID:/GUSEProjects/GUSEGraphicsEngine/include/glad -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/detail -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/ext -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtc -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtx -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/simd -ID:/GUSEProjects/GUSEGraphicsEngine/include/steam -ID:/GUSEProjects/GUSEGraphicsEngine/include -ID:/GUSEProjects/GUSEGraphicsEngine/src
-  OBJECT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Scene
-  TARGET_SUPPORT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
+build CMakeFiles/SummerEngine.dir/src/SummerEngine/Networking/NetworkManager.cpp.obj: CXX_COMPILER__SummerEngine_unscanned_Debug D$:/GUSEProjects/SummerEngine/src/SummerEngine/Networking/NetworkManager.cpp || cmake_object_order_depends_target_SummerEngine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SummerEngine.dir\src\SummerEngine\Networking\NetworkManager.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -O3
+  INCLUDES = -ID:/GUSEProjects/SummerEngine/include/GLFW -ID:/GUSEProjects/SummerEngine/include/KHR -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Networking -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components -ID:/GUSEProjects/SummerEngine/include/glad -ID:/GUSEProjects/SummerEngine/include/glm -ID:/GUSEProjects/SummerEngine/include/glm/detail -ID:/GUSEProjects/SummerEngine/include/glm/ext -ID:/GUSEProjects/SummerEngine/include/glm/gtc -ID:/GUSEProjects/SummerEngine/include/glm/gtx -ID:/GUSEProjects/SummerEngine/include/glm/simd -ID:/GUSEProjects/SummerEngine/include/steam -ID:/GUSEProjects/SummerEngine/include -ID:/GUSEProjects/SummerEngine/src -ID:/GUSEProjects/SummerEngine/lib
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SummerEngine.dir\src\SummerEngine\Networking
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
 
-build CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Scene/Components/Camera.cpp.obj: CXX_COMPILER__GUSEGraphicsEngine_unscanned_Release D$:/GUSEProjects/GUSEGraphicsEngine/src/GUSEVE/Scene/Components/Camera.cpp || cmake_object_order_depends_target_GUSEGraphicsEngine
-  CONFIG = Release
-  DEP_FILE = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Scene\Components\Camera.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17 -O3
-  INCLUDES = -ID:/GUSEProjects/GUSEGraphicsEngine/include/GLFW -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Math -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Utility -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics/Resources -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Networking -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene/Components -ID:/GUSEProjects/GUSEGraphicsEngine/include/KHR -ID:/GUSEProjects/GUSEGraphicsEngine/include/glad -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/detail -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/ext -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtc -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtx -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/simd -ID:/GUSEProjects/GUSEGraphicsEngine/include/steam -ID:/GUSEProjects/GUSEGraphicsEngine/include -ID:/GUSEProjects/GUSEGraphicsEngine/src
-  OBJECT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Scene\Components
-  TARGET_SUPPORT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
+build CMakeFiles/SummerEngine.dir/src/SummerEngine/Networking/Packet.cpp.obj: CXX_COMPILER__SummerEngine_unscanned_Debug D$:/GUSEProjects/SummerEngine/src/SummerEngine/Networking/Packet.cpp || cmake_object_order_depends_target_SummerEngine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SummerEngine.dir\src\SummerEngine\Networking\Packet.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -O3
+  INCLUDES = -ID:/GUSEProjects/SummerEngine/include/GLFW -ID:/GUSEProjects/SummerEngine/include/KHR -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Networking -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components -ID:/GUSEProjects/SummerEngine/include/glad -ID:/GUSEProjects/SummerEngine/include/glm -ID:/GUSEProjects/SummerEngine/include/glm/detail -ID:/GUSEProjects/SummerEngine/include/glm/ext -ID:/GUSEProjects/SummerEngine/include/glm/gtc -ID:/GUSEProjects/SummerEngine/include/glm/gtx -ID:/GUSEProjects/SummerEngine/include/glm/simd -ID:/GUSEProjects/SummerEngine/include/steam -ID:/GUSEProjects/SummerEngine/include -ID:/GUSEProjects/SummerEngine/src -ID:/GUSEProjects/SummerEngine/lib
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SummerEngine.dir\src\SummerEngine\Networking
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
 
-build CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Scene/Components/Light.cpp.obj: CXX_COMPILER__GUSEGraphicsEngine_unscanned_Release D$:/GUSEProjects/GUSEGraphicsEngine/src/GUSEVE/Scene/Components/Light.cpp || cmake_object_order_depends_target_GUSEGraphicsEngine
-  CONFIG = Release
-  DEP_FILE = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Scene\Components\Light.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17 -O3
-  INCLUDES = -ID:/GUSEProjects/GUSEGraphicsEngine/include/GLFW -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Math -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Utility -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics/Resources -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Networking -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene/Components -ID:/GUSEProjects/GUSEGraphicsEngine/include/KHR -ID:/GUSEProjects/GUSEGraphicsEngine/include/glad -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/detail -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/ext -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtc -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtx -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/simd -ID:/GUSEProjects/GUSEGraphicsEngine/include/steam -ID:/GUSEProjects/GUSEGraphicsEngine/include -ID:/GUSEProjects/GUSEGraphicsEngine/src
-  OBJECT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Scene\Components
-  TARGET_SUPPORT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
+build CMakeFiles/SummerEngine.dir/src/SummerEngine/Networking/SteamTransport.cpp.obj: CXX_COMPILER__SummerEngine_unscanned_Debug D$:/GUSEProjects/SummerEngine/src/SummerEngine/Networking/SteamTransport.cpp || cmake_object_order_depends_target_SummerEngine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SummerEngine.dir\src\SummerEngine\Networking\SteamTransport.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -O3
+  INCLUDES = -ID:/GUSEProjects/SummerEngine/include/GLFW -ID:/GUSEProjects/SummerEngine/include/KHR -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Networking -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components -ID:/GUSEProjects/SummerEngine/include/glad -ID:/GUSEProjects/SummerEngine/include/glm -ID:/GUSEProjects/SummerEngine/include/glm/detail -ID:/GUSEProjects/SummerEngine/include/glm/ext -ID:/GUSEProjects/SummerEngine/include/glm/gtc -ID:/GUSEProjects/SummerEngine/include/glm/gtx -ID:/GUSEProjects/SummerEngine/include/glm/simd -ID:/GUSEProjects/SummerEngine/include/steam -ID:/GUSEProjects/SummerEngine/include -ID:/GUSEProjects/SummerEngine/src -ID:/GUSEProjects/SummerEngine/lib
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SummerEngine.dir\src\SummerEngine\Networking
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
 
-build CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Scene/Components/Mesh.cpp.obj: CXX_COMPILER__GUSEGraphicsEngine_unscanned_Release D$:/GUSEProjects/GUSEGraphicsEngine/src/GUSEVE/Scene/Components/Mesh.cpp || cmake_object_order_depends_target_GUSEGraphicsEngine
-  CONFIG = Release
-  DEP_FILE = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Scene\Components\Mesh.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17 -O3
-  INCLUDES = -ID:/GUSEProjects/GUSEGraphicsEngine/include/GLFW -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Math -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Utility -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics/Resources -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Networking -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene/Components -ID:/GUSEProjects/GUSEGraphicsEngine/include/KHR -ID:/GUSEProjects/GUSEGraphicsEngine/include/glad -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/detail -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/ext -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtc -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtx -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/simd -ID:/GUSEProjects/GUSEGraphicsEngine/include/steam -ID:/GUSEProjects/GUSEGraphicsEngine/include -ID:/GUSEProjects/GUSEGraphicsEngine/src
-  OBJECT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Scene\Components
-  TARGET_SUPPORT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
+build CMakeFiles/SummerEngine.dir/src/SummerEngine/Scene/Component.cpp.obj: CXX_COMPILER__SummerEngine_unscanned_Debug D$:/GUSEProjects/SummerEngine/src/SummerEngine/Scene/Component.cpp || cmake_object_order_depends_target_SummerEngine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SummerEngine.dir\src\SummerEngine\Scene\Component.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -O3
+  INCLUDES = -ID:/GUSEProjects/SummerEngine/include/GLFW -ID:/GUSEProjects/SummerEngine/include/KHR -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Networking -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components -ID:/GUSEProjects/SummerEngine/include/glad -ID:/GUSEProjects/SummerEngine/include/glm -ID:/GUSEProjects/SummerEngine/include/glm/detail -ID:/GUSEProjects/SummerEngine/include/glm/ext -ID:/GUSEProjects/SummerEngine/include/glm/gtc -ID:/GUSEProjects/SummerEngine/include/glm/gtx -ID:/GUSEProjects/SummerEngine/include/glm/simd -ID:/GUSEProjects/SummerEngine/include/steam -ID:/GUSEProjects/SummerEngine/include -ID:/GUSEProjects/SummerEngine/src -ID:/GUSEProjects/SummerEngine/lib
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SummerEngine.dir\src\SummerEngine\Scene
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
 
-build CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Scene/Components/RectTransform.cpp.obj: CXX_COMPILER__GUSEGraphicsEngine_unscanned_Release D$:/GUSEProjects/GUSEGraphicsEngine/src/GUSEVE/Scene/Components/RectTransform.cpp || cmake_object_order_depends_target_GUSEGraphicsEngine
-  CONFIG = Release
-  DEP_FILE = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Scene\Components\RectTransform.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17 -O3
-  INCLUDES = -ID:/GUSEProjects/GUSEGraphicsEngine/include/GLFW -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Math -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Utility -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics/Resources -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Networking -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene/Components -ID:/GUSEProjects/GUSEGraphicsEngine/include/KHR -ID:/GUSEProjects/GUSEGraphicsEngine/include/glad -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/detail -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/ext -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtc -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtx -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/simd -ID:/GUSEProjects/GUSEGraphicsEngine/include/steam -ID:/GUSEProjects/GUSEGraphicsEngine/include -ID:/GUSEProjects/GUSEGraphicsEngine/src
-  OBJECT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Scene\Components
-  TARGET_SUPPORT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
+build CMakeFiles/SummerEngine.dir/src/SummerEngine/Scene/Components/Camera.cpp.obj: CXX_COMPILER__SummerEngine_unscanned_Debug D$:/GUSEProjects/SummerEngine/src/SummerEngine/Scene/Components/Camera.cpp || cmake_object_order_depends_target_SummerEngine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SummerEngine.dir\src\SummerEngine\Scene\Components\Camera.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -O3
+  INCLUDES = -ID:/GUSEProjects/SummerEngine/include/GLFW -ID:/GUSEProjects/SummerEngine/include/KHR -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Networking -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components -ID:/GUSEProjects/SummerEngine/include/glad -ID:/GUSEProjects/SummerEngine/include/glm -ID:/GUSEProjects/SummerEngine/include/glm/detail -ID:/GUSEProjects/SummerEngine/include/glm/ext -ID:/GUSEProjects/SummerEngine/include/glm/gtc -ID:/GUSEProjects/SummerEngine/include/glm/gtx -ID:/GUSEProjects/SummerEngine/include/glm/simd -ID:/GUSEProjects/SummerEngine/include/steam -ID:/GUSEProjects/SummerEngine/include -ID:/GUSEProjects/SummerEngine/src -ID:/GUSEProjects/SummerEngine/lib
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SummerEngine.dir\src\SummerEngine\Scene\Components
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
 
-build CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Scene/Components/Transform.cpp.obj: CXX_COMPILER__GUSEGraphicsEngine_unscanned_Release D$:/GUSEProjects/GUSEGraphicsEngine/src/GUSEVE/Scene/Components/Transform.cpp || cmake_object_order_depends_target_GUSEGraphicsEngine
-  CONFIG = Release
-  DEP_FILE = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Scene\Components\Transform.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17 -O3
-  INCLUDES = -ID:/GUSEProjects/GUSEGraphicsEngine/include/GLFW -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Math -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Utility -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics/Resources -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Networking -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene/Components -ID:/GUSEProjects/GUSEGraphicsEngine/include/KHR -ID:/GUSEProjects/GUSEGraphicsEngine/include/glad -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/detail -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/ext -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtc -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtx -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/simd -ID:/GUSEProjects/GUSEGraphicsEngine/include/steam -ID:/GUSEProjects/GUSEGraphicsEngine/include -ID:/GUSEProjects/GUSEGraphicsEngine/src
-  OBJECT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Scene\Components
-  TARGET_SUPPORT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
+build CMakeFiles/SummerEngine.dir/src/SummerEngine/Scene/Components/Light.cpp.obj: CXX_COMPILER__SummerEngine_unscanned_Debug D$:/GUSEProjects/SummerEngine/src/SummerEngine/Scene/Components/Light.cpp || cmake_object_order_depends_target_SummerEngine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SummerEngine.dir\src\SummerEngine\Scene\Components\Light.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -O3
+  INCLUDES = -ID:/GUSEProjects/SummerEngine/include/GLFW -ID:/GUSEProjects/SummerEngine/include/KHR -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Networking -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components -ID:/GUSEProjects/SummerEngine/include/glad -ID:/GUSEProjects/SummerEngine/include/glm -ID:/GUSEProjects/SummerEngine/include/glm/detail -ID:/GUSEProjects/SummerEngine/include/glm/ext -ID:/GUSEProjects/SummerEngine/include/glm/gtc -ID:/GUSEProjects/SummerEngine/include/glm/gtx -ID:/GUSEProjects/SummerEngine/include/glm/simd -ID:/GUSEProjects/SummerEngine/include/steam -ID:/GUSEProjects/SummerEngine/include -ID:/GUSEProjects/SummerEngine/src -ID:/GUSEProjects/SummerEngine/lib
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SummerEngine.dir\src\SummerEngine\Scene\Components
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
 
-build CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Scene/Components/UIImage.cpp.obj: CXX_COMPILER__GUSEGraphicsEngine_unscanned_Release D$:/GUSEProjects/GUSEGraphicsEngine/src/GUSEVE/Scene/Components/UIImage.cpp || cmake_object_order_depends_target_GUSEGraphicsEngine
-  CONFIG = Release
-  DEP_FILE = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Scene\Components\UIImage.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17 -O3
-  INCLUDES = -ID:/GUSEProjects/GUSEGraphicsEngine/include/GLFW -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Math -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Utility -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics/Resources -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Networking -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene/Components -ID:/GUSEProjects/GUSEGraphicsEngine/include/KHR -ID:/GUSEProjects/GUSEGraphicsEngine/include/glad -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/detail -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/ext -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtc -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtx -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/simd -ID:/GUSEProjects/GUSEGraphicsEngine/include/steam -ID:/GUSEProjects/GUSEGraphicsEngine/include -ID:/GUSEProjects/GUSEGraphicsEngine/src
-  OBJECT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Scene\Components
-  TARGET_SUPPORT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
+build CMakeFiles/SummerEngine.dir/src/SummerEngine/Scene/Components/Mesh.cpp.obj: CXX_COMPILER__SummerEngine_unscanned_Debug D$:/GUSEProjects/SummerEngine/src/SummerEngine/Scene/Components/Mesh.cpp || cmake_object_order_depends_target_SummerEngine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SummerEngine.dir\src\SummerEngine\Scene\Components\Mesh.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -O3
+  INCLUDES = -ID:/GUSEProjects/SummerEngine/include/GLFW -ID:/GUSEProjects/SummerEngine/include/KHR -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Networking -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components -ID:/GUSEProjects/SummerEngine/include/glad -ID:/GUSEProjects/SummerEngine/include/glm -ID:/GUSEProjects/SummerEngine/include/glm/detail -ID:/GUSEProjects/SummerEngine/include/glm/ext -ID:/GUSEProjects/SummerEngine/include/glm/gtc -ID:/GUSEProjects/SummerEngine/include/glm/gtx -ID:/GUSEProjects/SummerEngine/include/glm/simd -ID:/GUSEProjects/SummerEngine/include/steam -ID:/GUSEProjects/SummerEngine/include -ID:/GUSEProjects/SummerEngine/src -ID:/GUSEProjects/SummerEngine/lib
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SummerEngine.dir\src\SummerEngine\Scene\Components
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
 
-build CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Scene/Object.cpp.obj: CXX_COMPILER__GUSEGraphicsEngine_unscanned_Release D$:/GUSEProjects/GUSEGraphicsEngine/src/GUSEVE/Scene/Object.cpp || cmake_object_order_depends_target_GUSEGraphicsEngine
-  CONFIG = Release
-  DEP_FILE = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Scene\Object.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17 -O3
-  INCLUDES = -ID:/GUSEProjects/GUSEGraphicsEngine/include/GLFW -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Math -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Utility -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics/Resources -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Networking -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene/Components -ID:/GUSEProjects/GUSEGraphicsEngine/include/KHR -ID:/GUSEProjects/GUSEGraphicsEngine/include/glad -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/detail -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/ext -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtc -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtx -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/simd -ID:/GUSEProjects/GUSEGraphicsEngine/include/steam -ID:/GUSEProjects/GUSEGraphicsEngine/include -ID:/GUSEProjects/GUSEGraphicsEngine/src
-  OBJECT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUSEGraphicsEngine.dir\src\GUSEVE\Scene
-  TARGET_SUPPORT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
+build CMakeFiles/SummerEngine.dir/src/SummerEngine/Scene/Components/RectTransform.cpp.obj: CXX_COMPILER__SummerEngine_unscanned_Debug D$:/GUSEProjects/SummerEngine/src/SummerEngine/Scene/Components/RectTransform.cpp || cmake_object_order_depends_target_SummerEngine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SummerEngine.dir\src\SummerEngine\Scene\Components\RectTransform.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -O3
+  INCLUDES = -ID:/GUSEProjects/SummerEngine/include/GLFW -ID:/GUSEProjects/SummerEngine/include/KHR -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Networking -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components -ID:/GUSEProjects/SummerEngine/include/glad -ID:/GUSEProjects/SummerEngine/include/glm -ID:/GUSEProjects/SummerEngine/include/glm/detail -ID:/GUSEProjects/SummerEngine/include/glm/ext -ID:/GUSEProjects/SummerEngine/include/glm/gtc -ID:/GUSEProjects/SummerEngine/include/glm/gtx -ID:/GUSEProjects/SummerEngine/include/glm/simd -ID:/GUSEProjects/SummerEngine/include/steam -ID:/GUSEProjects/SummerEngine/include -ID:/GUSEProjects/SummerEngine/src -ID:/GUSEProjects/SummerEngine/lib
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SummerEngine.dir\src\SummerEngine\Scene\Components
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
 
-build CMakeFiles/GUSEGraphicsEngine.dir/src/main.cpp.obj: CXX_COMPILER__GUSEGraphicsEngine_unscanned_Release D$:/GUSEProjects/GUSEGraphicsEngine/src/main.cpp || cmake_object_order_depends_target_GUSEGraphicsEngine
-  CONFIG = Release
-  DEP_FILE = CMakeFiles\GUSEGraphicsEngine.dir\src\main.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++17 -O3
-  INCLUDES = -ID:/GUSEProjects/GUSEGraphicsEngine/include/GLFW -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Math -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Core/Utility -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Graphics/Resources -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Networking -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene -ID:/GUSEProjects/GUSEGraphicsEngine/include/GUSEVE/Scene/Components -ID:/GUSEProjects/GUSEGraphicsEngine/include/KHR -ID:/GUSEProjects/GUSEGraphicsEngine/include/glad -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/detail -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/ext -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtc -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/gtx -ID:/GUSEProjects/GUSEGraphicsEngine/include/glm/simd -ID:/GUSEProjects/GUSEGraphicsEngine/include/steam -ID:/GUSEProjects/GUSEGraphicsEngine/include -ID:/GUSEProjects/GUSEGraphicsEngine/src
-  OBJECT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
-  OBJECT_FILE_DIR = CMakeFiles\GUSEGraphicsEngine.dir\src
-  TARGET_SUPPORT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
+build CMakeFiles/SummerEngine.dir/src/SummerEngine/Scene/Components/Transform.cpp.obj: CXX_COMPILER__SummerEngine_unscanned_Debug D$:/GUSEProjects/SummerEngine/src/SummerEngine/Scene/Components/Transform.cpp || cmake_object_order_depends_target_SummerEngine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SummerEngine.dir\src\SummerEngine\Scene\Components\Transform.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -O3
+  INCLUDES = -ID:/GUSEProjects/SummerEngine/include/GLFW -ID:/GUSEProjects/SummerEngine/include/KHR -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Networking -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components -ID:/GUSEProjects/SummerEngine/include/glad -ID:/GUSEProjects/SummerEngine/include/glm -ID:/GUSEProjects/SummerEngine/include/glm/detail -ID:/GUSEProjects/SummerEngine/include/glm/ext -ID:/GUSEProjects/SummerEngine/include/glm/gtc -ID:/GUSEProjects/SummerEngine/include/glm/gtx -ID:/GUSEProjects/SummerEngine/include/glm/simd -ID:/GUSEProjects/SummerEngine/include/steam -ID:/GUSEProjects/SummerEngine/include -ID:/GUSEProjects/SummerEngine/src -ID:/GUSEProjects/SummerEngine/lib
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SummerEngine.dir\src\SummerEngine\Scene\Components
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
+
+build CMakeFiles/SummerEngine.dir/src/SummerEngine/Scene/Components/UIButton.cpp.obj: CXX_COMPILER__SummerEngine_unscanned_Debug D$:/GUSEProjects/SummerEngine/src/SummerEngine/Scene/Components/UIButton.cpp || cmake_object_order_depends_target_SummerEngine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SummerEngine.dir\src\SummerEngine\Scene\Components\UIButton.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -O3
+  INCLUDES = -ID:/GUSEProjects/SummerEngine/include/GLFW -ID:/GUSEProjects/SummerEngine/include/KHR -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Networking -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components -ID:/GUSEProjects/SummerEngine/include/glad -ID:/GUSEProjects/SummerEngine/include/glm -ID:/GUSEProjects/SummerEngine/include/glm/detail -ID:/GUSEProjects/SummerEngine/include/glm/ext -ID:/GUSEProjects/SummerEngine/include/glm/gtc -ID:/GUSEProjects/SummerEngine/include/glm/gtx -ID:/GUSEProjects/SummerEngine/include/glm/simd -ID:/GUSEProjects/SummerEngine/include/steam -ID:/GUSEProjects/SummerEngine/include -ID:/GUSEProjects/SummerEngine/src -ID:/GUSEProjects/SummerEngine/lib
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SummerEngine.dir\src\SummerEngine\Scene\Components
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
+
+build CMakeFiles/SummerEngine.dir/src/SummerEngine/Scene/Components/UIImage.cpp.obj: CXX_COMPILER__SummerEngine_unscanned_Debug D$:/GUSEProjects/SummerEngine/src/SummerEngine/Scene/Components/UIImage.cpp || cmake_object_order_depends_target_SummerEngine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SummerEngine.dir\src\SummerEngine\Scene\Components\UIImage.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -O3
+  INCLUDES = -ID:/GUSEProjects/SummerEngine/include/GLFW -ID:/GUSEProjects/SummerEngine/include/KHR -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Networking -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components -ID:/GUSEProjects/SummerEngine/include/glad -ID:/GUSEProjects/SummerEngine/include/glm -ID:/GUSEProjects/SummerEngine/include/glm/detail -ID:/GUSEProjects/SummerEngine/include/glm/ext -ID:/GUSEProjects/SummerEngine/include/glm/gtc -ID:/GUSEProjects/SummerEngine/include/glm/gtx -ID:/GUSEProjects/SummerEngine/include/glm/simd -ID:/GUSEProjects/SummerEngine/include/steam -ID:/GUSEProjects/SummerEngine/include -ID:/GUSEProjects/SummerEngine/src -ID:/GUSEProjects/SummerEngine/lib
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SummerEngine.dir\src\SummerEngine\Scene\Components
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
+
+build CMakeFiles/SummerEngine.dir/src/SummerEngine/Scene/Object.cpp.obj: CXX_COMPILER__SummerEngine_unscanned_Debug D$:/GUSEProjects/SummerEngine/src/SummerEngine/Scene/Object.cpp || cmake_object_order_depends_target_SummerEngine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SummerEngine.dir\src\SummerEngine\Scene\Object.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -O3
+  INCLUDES = -ID:/GUSEProjects/SummerEngine/include/GLFW -ID:/GUSEProjects/SummerEngine/include/KHR -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Networking -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components -ID:/GUSEProjects/SummerEngine/include/glad -ID:/GUSEProjects/SummerEngine/include/glm -ID:/GUSEProjects/SummerEngine/include/glm/detail -ID:/GUSEProjects/SummerEngine/include/glm/ext -ID:/GUSEProjects/SummerEngine/include/glm/gtc -ID:/GUSEProjects/SummerEngine/include/glm/gtx -ID:/GUSEProjects/SummerEngine/include/glm/simd -ID:/GUSEProjects/SummerEngine/include/steam -ID:/GUSEProjects/SummerEngine/include -ID:/GUSEProjects/SummerEngine/src -ID:/GUSEProjects/SummerEngine/lib
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SummerEngine.dir\src\SummerEngine\Scene
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
+
+build CMakeFiles/SummerEngine.dir/src/main.cpp.obj: CXX_COMPILER__SummerEngine_unscanned_Debug D$:/GUSEProjects/SummerEngine/src/main.cpp || cmake_object_order_depends_target_SummerEngine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\SummerEngine.dir\src\main.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -O3
+  INCLUDES = -ID:/GUSEProjects/SummerEngine/include/GLFW -ID:/GUSEProjects/SummerEngine/include/KHR -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Networking -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene -ID:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components -ID:/GUSEProjects/SummerEngine/include/glad -ID:/GUSEProjects/SummerEngine/include/glm -ID:/GUSEProjects/SummerEngine/include/glm/detail -ID:/GUSEProjects/SummerEngine/include/glm/ext -ID:/GUSEProjects/SummerEngine/include/glm/gtc -ID:/GUSEProjects/SummerEngine/include/glm/gtx -ID:/GUSEProjects/SummerEngine/include/glm/simd -ID:/GUSEProjects/SummerEngine/include/steam -ID:/GUSEProjects/SummerEngine/include -ID:/GUSEProjects/SummerEngine/src -ID:/GUSEProjects/SummerEngine/lib
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\SummerEngine.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target GUSEGraphicsEngine
+# Link build statements for EXECUTABLE target SummerEngine
 
 
 #############################################
-# Link the executable GUSEGraphicsEngine.exe
+# Link the executable SummerEngine.exe
 
-build GUSEGraphicsEngine.exe: CXX_EXECUTABLE_LINKER__GUSEGraphicsEngine_Release CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Core/Engine.cpp.obj CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Core/Input.cpp.obj CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Core/Utility/FileReader.cpp.obj CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Core/Utility/Utility.cpp.obj CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Core/glad.c.obj CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Graphics/EBO.cpp.obj CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Graphics/MaterialData.cpp.obj CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Graphics/Renderer.cpp.obj CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Graphics/ShaderData.cpp.obj CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Graphics/VAO.cpp.obj CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Graphics/VBO.cpp.obj CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Networking/NetworkManager.cpp.obj CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Networking/Packet.cpp.obj CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Networking/SteamTransport.cpp.obj CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Scene/Component.cpp.obj CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Scene/Components/Camera.cpp.obj CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Scene/Components/Light.cpp.obj CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Scene/Components/Mesh.cpp.obj CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Scene/Components/RectTransform.cpp.obj CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Scene/Components/Transform.cpp.obj CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Scene/Components/UIImage.cpp.obj CMakeFiles/GUSEGraphicsEngine.dir/src/GUSEVE/Scene/Object.cpp.obj CMakeFiles/GUSEGraphicsEngine.dir/src/main.cpp.obj | C$:/msys64/ucrt64/lib/libglfw3.a D$:/GUSEProjects/GUSEGraphicsEngine/lib/steam_api.a || CopyAssets
-  CONFIG = Release
-  FLAGS = -O3 -DNDEBUG
+build SummerEngine.exe: CXX_EXECUTABLE_LINKER__SummerEngine_Debug CMakeFiles/SummerEngine.dir/src/SummerEngine/Core/Engine.cpp.obj CMakeFiles/SummerEngine.dir/src/SummerEngine/Core/EnginePanel.cpp.obj CMakeFiles/SummerEngine.dir/src/SummerEngine/Core/EngineUI.cpp.obj CMakeFiles/SummerEngine.dir/src/SummerEngine/Core/Input.cpp.obj CMakeFiles/SummerEngine.dir/src/SummerEngine/Core/Utility/FileReader.cpp.obj CMakeFiles/SummerEngine.dir/src/SummerEngine/Core/Utility/Utility.cpp.obj CMakeFiles/SummerEngine.dir/src/SummerEngine/Core/glad.c.obj CMakeFiles/SummerEngine.dir/src/SummerEngine/Graphics/EBO.cpp.obj CMakeFiles/SummerEngine.dir/src/SummerEngine/Graphics/MaterialData.cpp.obj CMakeFiles/SummerEngine.dir/src/SummerEngine/Graphics/Renderer.cpp.obj CMakeFiles/SummerEngine.dir/src/SummerEngine/Graphics/ShaderData.cpp.obj CMakeFiles/SummerEngine.dir/src/SummerEngine/Graphics/VAO.cpp.obj CMakeFiles/SummerEngine.dir/src/SummerEngine/Graphics/VBO.cpp.obj CMakeFiles/SummerEngine.dir/src/SummerEngine/Graphics/stb_image.cpp.obj CMakeFiles/SummerEngine.dir/src/SummerEngine/Networking/NetworkManager.cpp.obj CMakeFiles/SummerEngine.dir/src/SummerEngine/Networking/Packet.cpp.obj CMakeFiles/SummerEngine.dir/src/SummerEngine/Networking/SteamTransport.cpp.obj CMakeFiles/SummerEngine.dir/src/SummerEngine/Scene/Component.cpp.obj CMakeFiles/SummerEngine.dir/src/SummerEngine/Scene/Components/Camera.cpp.obj CMakeFiles/SummerEngine.dir/src/SummerEngine/Scene/Components/Light.cpp.obj CMakeFiles/SummerEngine.dir/src/SummerEngine/Scene/Components/Mesh.cpp.obj CMakeFiles/SummerEngine.dir/src/SummerEngine/Scene/Components/RectTransform.cpp.obj CMakeFiles/SummerEngine.dir/src/SummerEngine/Scene/Components/Transform.cpp.obj CMakeFiles/SummerEngine.dir/src/SummerEngine/Scene/Components/UIButton.cpp.obj CMakeFiles/SummerEngine.dir/src/SummerEngine/Scene/Components/UIImage.cpp.obj CMakeFiles/SummerEngine.dir/src/SummerEngine/Scene/Object.cpp.obj CMakeFiles/SummerEngine.dir/src/main.cpp.obj | D$:/GUSEProjects/SummerEngine/lib/libglfw3.a D$:/GUSEProjects/SummerEngine/lib/steam_api.a || CopyAssets
+  CONFIG = Debug
+  FLAGS = -g
   LINK_FLAGS = -static -static-libgcc -static-libstdc++
-  LINK_LIBRARIES = -lopengl32  -lgdi32  C:/msys64/ucrt64/lib/libglfw3.a  D:/GUSEProjects/GUSEGraphicsEngine/lib/steam_api.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
+  LINK_LIBRARIES = -lopengl32  -lgdi32  D:/GUSEProjects/SummerEngine/lib/libglfw3.a  D:/GUSEProjects/SummerEngine/lib/steam_api.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\SummerEngine.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = GUSEGraphicsEngine.exe
-  TARGET_IMPLIB = libGUSEGraphicsEngine.dll.a
-  TARGET_PDB = GUSEGraphicsEngine.exe.dbg
-  TARGET_SUPPORT_DIR = CMakeFiles\GUSEGraphicsEngine.dir
+  TARGET_FILE = SummerEngine.exe
+  TARGET_IMPLIB = libSummerEngine.dll.a
+  TARGET_PDB = SummerEngine.exe.dbg
+  TARGET_SUPPORT_DIR = CMakeFiles\SummerEngine.dir
 
 
 #############################################
@@ -288,7 +324,7 @@ build CopyAssets: phony CMakeFiles/CopyAssets
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GUSEProjects\GUSEGraphicsEngine\build && C:\msys64\ucrt64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GUSEProjects\SummerEngine\build && C:\msys64\ucrt64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -299,7 +335,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GUSEProjects\GUSEGraphicsEngine\build && C:\msys64\ucrt64\bin\cmake.exe --regenerate-during-build -SD:\GUSEProjects\GUSEGraphicsEngine -BD:\GUSEProjects\GUSEGraphicsEngine\build"
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GUSEProjects\SummerEngine\build && C:\msys64\ucrt64\bin\cmake.exe --regenerate-during-build -SD:\GUSEProjects\SummerEngine -BD:\GUSEProjects\SummerEngine\build"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -311,13 +347,13 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Custom command for CMakeFiles\CopyAssets
 
 build CMakeFiles/CopyAssets | ${cmake_ninja_workdir}CMakeFiles/CopyAssets: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GUSEProjects\GUSEGraphicsEngine\build && C:\msys64\ucrt64\bin\cmake.exe -E copy_directory D:/GUSEProjects/GUSEGraphicsEngine/assets D:/GUSEProjects/GUSEGraphicsEngine/build/assets"
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GUSEProjects\SummerEngine\build && C:\msys64\ucrt64\bin\cmake.exe -E copy_directory D:/GUSEProjects/SummerEngine/assets D:/GUSEProjects/SummerEngine/build/assets"
   DESC = Force copying assets to build folder...
 
 # =============================================================================
 # Target aliases.
 
-build GUSEGraphicsEngine: phony GUSEGraphicsEngine.exe
+build SummerEngine: phony SummerEngine.exe
 
 # =============================================================================
 # Folder targets.
@@ -325,9 +361,9 @@ build GUSEGraphicsEngine: phony GUSEGraphicsEngine.exe
 # =============================================================================
 
 #############################################
-# Folder: D:/GUSEProjects/GUSEGraphicsEngine/build
+# Folder: D:/GUSEProjects/SummerEngine/build
 
-build all: phony GUSEGraphicsEngine.exe CopyAssets
+build all: phony SummerEngine.exe CopyAssets
 
 # =============================================================================
 # Built-in targets
@@ -336,13 +372,13 @@ build all: phony GUSEGraphicsEngine.exe CopyAssets
 #############################################
 # Phony target to force glob verification run.
 
-build D$:/GUSEProjects/GUSEGraphicsEngine/build/CMakeFiles/VerifyGlobs.cmake_force: phony
+build D$:/GUSEProjects/SummerEngine/build/CMakeFiles/VerifyGlobs.cmake_force: phony
 
 
 #############################################
 # Re-run CMake to check if globbed directories changed.
 
-build D$:/GUSEProjects/GUSEGraphicsEngine/build/CMakeFiles/cmake.verify_globs: VERIFY_GLOBS | D$:/GUSEProjects/GUSEGraphicsEngine/build/CMakeFiles/VerifyGlobs.cmake_force
+build D$:/GUSEProjects/SummerEngine/build/CMakeFiles/cmake.verify_globs: VERIFY_GLOBS | D$:/GUSEProjects/SummerEngine/build/CMakeFiles/VerifyGlobs.cmake_force
   pool = console
   restat = 1
 
@@ -350,14 +386,14 @@ build D$:/GUSEProjects/GUSEGraphicsEngine/build/CMakeFiles/cmake.verify_globs: V
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja D$:/GUSEProjects/GUSEGraphicsEngine/build/cmake_install.cmake: RERUN_CMAKE D$:/GUSEProjects/GUSEGraphicsEngine/build/CMakeFiles/cmake.verify_globs | C$:/msys64/ucrt64/share/cmake/Modules/CMakeCInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeCXXInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeCommonLanguageInclude.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeGenericSystem.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeInitializeConfigs.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeLanguageInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeRCInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Clang-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Clang-CXX.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Clang.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU-CXX.cmake C$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU-CXX.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Clang-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Clang-CXX.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Clang.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Initialize.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-windres.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/4.3.3/CMakeCCompiler.cmake CMakeFiles/4.3.3/CMakeCXXCompiler.cmake CMakeFiles/4.3.3/CMakeRCCompiler.cmake CMakeFiles/4.3.3/CMakeSystem.cmake D$:/GUSEProjects/GUSEGraphicsEngine/build/CMakeFiles/VerifyGlobs.cmake D$:/GUSEProjects/GUSEGraphicsEngine/CMakeLists.txt
+build build.ninja D$:/GUSEProjects/SummerEngine/build/cmake_install.cmake: RERUN_CMAKE D$:/GUSEProjects/SummerEngine/build/CMakeFiles/cmake.verify_globs | C$:/msys64/ucrt64/share/cmake/Modules/CMakeCInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeCXXInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeCommonLanguageInclude.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeGenericSystem.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeInitializeConfigs.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeLanguageInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeRCInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Clang-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Clang-CXX.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Clang.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU-CXX.cmake C$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU-CXX.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Clang-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Clang-CXX.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Clang.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Initialize.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-windres.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/4.3.3/CMakeCCompiler.cmake CMakeFiles/4.3.3/CMakeCXXCompiler.cmake CMakeFiles/4.3.3/CMakeRCCompiler.cmake CMakeFiles/4.3.3/CMakeSystem.cmake D$:/GUSEProjects/SummerEngine/build/CMakeFiles/VerifyGlobs.cmake D$:/GUSEProjects/SummerEngine/CMakeLists.txt
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/msys64/ucrt64/share/cmake/Modules/CMakeCInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeCXXInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeCommonLanguageInclude.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeGenericSystem.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeInitializeConfigs.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeLanguageInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeRCInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Clang-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Clang-CXX.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Clang.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU-CXX.cmake C$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU-CXX.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Clang-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Clang-CXX.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Clang.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Initialize.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-windres.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/4.3.3/CMakeCCompiler.cmake CMakeFiles/4.3.3/CMakeCXXCompiler.cmake CMakeFiles/4.3.3/CMakeRCCompiler.cmake CMakeFiles/4.3.3/CMakeSystem.cmake D$:/GUSEProjects/GUSEGraphicsEngine/build/CMakeFiles/VerifyGlobs.cmake D$:/GUSEProjects/GUSEGraphicsEngine/CMakeLists.txt: phony
+build C$:/msys64/ucrt64/share/cmake/Modules/CMakeCInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeCXXInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeCommonLanguageInclude.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeGenericSystem.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeInitializeConfigs.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeLanguageInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeRCInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Clang-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Clang-CXX.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Clang.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU-CXX.cmake C$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU-CXX.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Clang-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Clang-CXX.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Clang.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Initialize.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-windres.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/4.3.3/CMakeCCompiler.cmake CMakeFiles/4.3.3/CMakeCXXCompiler.cmake CMakeFiles/4.3.3/CMakeRCCompiler.cmake CMakeFiles/4.3.3/CMakeSystem.cmake D$:/GUSEProjects/SummerEngine/build/CMakeFiles/VerifyGlobs.cmake D$:/GUSEProjects/SummerEngine/CMakeLists.txt: phony
 
 
 #############################################

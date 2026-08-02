@@ -125,7 +125,8 @@ void ReadMeshFile(const string &filePath, vector<float> &vertices, vector<unsign
                 vertUVs.push_back(uv.x);
                 vertUVs.push_back(uv.y);
 
-                indices.push_back(indices.size());
+                unsigned int currentVertexIndex = vertices.size() / 3;
+                indices.push_back(currentVertexIndex);
             }
         }
     }

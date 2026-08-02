@@ -1,18 +1,19 @@
 #include "MaterialData.h"
+#include "Engine.h"
 
 Material::Material()
 {
 
 }
 
-Material::Material(std::shared_ptr<ShaderData> _shader)
+Material::Material(std::shared_ptr<Shader> _shader)
 {
     shader = _shader;
 }
 
 Material::Material(std::string vertPath, std::string fragPath)
 {
-    shader = ResourceManager::Get<ShaderData>(vertPath+fragPath, vertPath, fragPath);
+    shader = ResourceManager::CreateResource<Shader>(vertPath+fragPath, vertPath, fragPath);
 }
 
 void Material::ApplyMaterial()
@@ -35,5 +36,19 @@ void Material::ApplyMaterial()
                 shader->SetVector3(name, arg);
 
         }, property);
+    }
+
+    int i = 0;
+    for(std::string textureName : shader->requiredTextures)
+    {
+        unsigned int textureToUse = Engine::whiteTextureId;
+        if(textures.contains(textureName))
+        {
+            textureToUse = textures[textureName]->textureId;
+        }
+        
+        glActiveTexture(GL_TEXTURE0 + i);
+        glBindTexture(GL_TEXTURE_2D, textureToUse);
+        shader->SetInt(textureName, i++);
     }
 }

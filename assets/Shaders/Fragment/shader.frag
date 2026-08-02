@@ -2,48 +2,48 @@
 
 in vec3 fragPos;
 in vec3 normal;
+in vec2 UV;
 
 out vec4 FragColor;
 
-// Define the structure of your light
 struct Light {
     vec3 color;
     vec3 position;
     float strength;
-    vec3 direction; // For directional lights
-    int type;       // 0 = Point Light, 1 = Directional Light
+    vec3 direction;
+    int type; // 0 = Directional, 1 = Point
 };
 
-#define MAX_LIGHTS 32
-
-uniform Light lights[MAX_LIGHTS];
+uniform Light lights[32];
 uniform int lightsInScene;
+uniform vec3 baseColor;
+uniform sampler2D baseTexture;
 
 vec3 CalculateDirectionalLight(int i)
 {
     Light light = lights[i];
-    return light.strength * light.color * max(dot(normalize(normal), -light.direction), 0.);
-}
-
-/*vec3 CalculatePointLight()
-{
+    vec3 norm = normalize(normal);
+    vec3 lightDir = normalize(-light.direction);
     
-}*/
+    float diff = max(dot(norm, lightDir), 0.0);
+    
+    return texture(baseTexture, UV).rgb * baseColor * light.color * (diff * light.strength);
+}
 
 void main()
 {
-    vec3 result = vec3(0);
-
+    // Ambient lighting base
     vec3 ambientStrength = vec3(0.1);
-    result += ambientStrength * vec3(1);
+    vec3 result = ambientStrength * baseColor * texture(baseTexture, UV).rgb;
 
+    // Accumulate light sources
     for(int i = 0; i < lightsInScene; i++)
     {
-        if(lights[i].type == 1) // Directional Light
+        if(lights[i].type == 0) // Directional Light
         {
             result += CalculateDirectionalLight(i);
         } 
     }
 
-    FragColor = vec4(result, 1.0);
+    FragColor = vec4(texture(baseTexture, UV).rgb, 1.0);
 }

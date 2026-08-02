@@ -2,6 +2,7 @@
 
 in vec3 fragPos;
 in vec3 normal;
+in vec2 UV;
 
 out vec4 FragColor;
 
@@ -16,6 +17,7 @@ struct Light {
 uniform Light lights[32];
 uniform int lightsInScene;
 uniform vec3 baseColor;
+uniform sampler2D baseTexture;
 
 vec3 CalculateDirectionalLight(int i)
 {
@@ -25,14 +27,14 @@ vec3 CalculateDirectionalLight(int i)
     
     float diff = max(dot(norm, lightDir), 0.0);
     
-    return baseColor * light.color * (diff * light.strength);
+    return texture(baseTexture, UV).rgb * baseColor * light.color * (diff * light.strength);
 }
 
 void main()
 {
     // Ambient lighting base
     vec3 ambientStrength = vec3(0.1);
-    vec3 result = ambientStrength * baseColor;
+    vec3 result = ambientStrength * baseColor * texture(baseTexture, UV).rgb;
 
     // Accumulate light sources
     for(int i = 0; i < lightsInScene; i++)
@@ -43,5 +45,5 @@ void main()
         } 
     }
 
-    FragColor = vec4(result, 1.0);
+    FragColor = vec4(texture(baseTexture, UV).rgb, 1.0);
 }

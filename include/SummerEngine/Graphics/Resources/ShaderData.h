@@ -5,13 +5,14 @@
 #include "Utility.h"
 #include "Resource.h"
 
-class ShaderData : Resource
+class Shader : Resource
 {
-    public:
+public:
     unsigned int shaderId;
+    std::vector<std::string> requiredTextures;
 
-    ShaderData(const std::string& vertPath, const std::string& fragPath);
-    ~ShaderData();
+    Shader(const std::string& vertPath, const std::string& fragPath);
+    ~Shader();
 
     void Use();
 
@@ -21,7 +22,5 @@ class ShaderData : Resource
     void SetVector3(const std::string &name, const Vector3 &value);
     void SetMat4(const std::string &name, const glm::mat4 &mat);
 
-    private:
-    unsigned int vertexShader;
-    unsigned int fragmentShader;
+    void InspectShaderTextures();
 };

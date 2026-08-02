@@ -28,14 +28,17 @@ struct RenderCommand
 
 class Renderer
 {
-    public:
+public:
     static std::vector<RenderCommand> renderQueue;
     static glm::mat4 viewProjectionMatrix;
     static glm::mat4 orthographicMatrix;
+    static int lastShader;
+    static shared_ptr<MeshData> lastMesh;
+    static shared_ptr<Material> lastMaterial;
 
     static void Render();
 
-    private:
+private:
     static void SortQueue();
     static void RenderMesh(RenderCommand command);
     static void RenderStaticMesh(RenderCommand command);

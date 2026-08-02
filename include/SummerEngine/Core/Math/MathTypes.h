@@ -39,12 +39,22 @@ struct Vector3
         return Vector3{ x / other.x, y / other.y, z / other.z };
     }
 
+    Vector3 operator-() const
+    {
+        return Vector3(-x,-y, -z);
+    }
+
     operator glm::vec3() const 
     {
         return glm::vec3(x, y, z);
     }
 
     Vector3(const glm::vec3& v) : x(v.x), y(v.y), z(v.z) {}
+
+    bool operator==(const Vector3& other) const
+    {
+        return other.x == x && other.y == y && other.z == z;
+    }
 };
 
 struct Vector2
@@ -55,21 +65,41 @@ struct Vector2
     Vector2() = default;
 
     Vector2(float _x, float _y) : x(_x), y(_y) {}
+    Vector2(float _s) : x(_s), y(_s) {}
 
-    Vector2 operator+(const Vector2& other) const {
+    Vector2 operator+(const Vector2& other) const 
+    {
         return Vector2{ x + other.x, y + other.y };
     }
 
-    Vector2 operator-(const Vector2& other) const {
+    Vector2 operator-(const Vector2& other) const 
+    {
         return Vector2{ x - other.x, y - other.y };
     }
 
-    Vector2 operator*(const Vector2& other) const {
+    Vector2 operator*(const Vector2& other) const 
+    {
         return Vector2{ x * other.x, y * other.y };
     }
 
-    Vector2 operator/(const Vector2& other) const {
+    Vector2 operator/(const Vector2& other) const 
+    {
         return Vector2{ x / other.x, y / other.y };
+    }
+
+    bool operator==(const Vector2& other) const
+    {
+        return other.x == x && other.y == y;
+    }
+
+    Vector2 operator-() const
+    {
+        return Vector2(-x,-y);
+    }
+
+    operator glm::vec2()
+    {
+        return glm::vec2(x,y);
     }
 };
 

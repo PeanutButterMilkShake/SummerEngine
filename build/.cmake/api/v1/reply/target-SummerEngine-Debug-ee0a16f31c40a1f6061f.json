@@ -1,0 +1,612 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "SummerEngine.exe"
+		},
+		{
+			"path" : "SummerEngine.pdb"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_options",
+			"target_link_libraries",
+			"add_dependencies",
+			"target_compile_options",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 11,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 71,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 62,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 89,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 69,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 25,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -std=gnu++20"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-O3"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/GLFW"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/KHR"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/SummerEngine/Core"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/SummerEngine/Networking"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/SummerEngine/Scene"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/glad"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/glm"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/glm/detail"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/glm/ext"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/glm/gtc"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/glm/gtx"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/glm/simd"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/steam"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/src"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/lib"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "20"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-O3"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/GLFW"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/KHR"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/SummerEngine/Core"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Math"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/SummerEngine/Core/Utility"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/SummerEngine/Graphics/Resources"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/SummerEngine/Networking"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/SummerEngine/Scene"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/SummerEngine/Scene/Components"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/glad"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/glm"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/glm/detail"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/glm/ext"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/glm/gtc"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/glm/gtx"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/glm/simd"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include/steam"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/src"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "D:/GUSEProjects/SummerEngine/lib"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				6
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "CopyAssets::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "SummerEngine::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-static",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-static-libgcc",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-static-libstdc++",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "-lopengl32",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "-lgdi32",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "D:\\GUSEProjects\\SummerEngine\\lib\\libglfw3.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "D:\\GUSEProjects\\SummerEngine\\lib\\steam_api.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"linkLibraries" : 
+	[
+		{
+			"backtrace" : 3,
+			"fragment" : "opengl32"
+		},
+		{
+			"backtrace" : 3,
+			"fragment" : "gdi32"
+		},
+		{
+			"backtrace" : 3,
+			"fragment" : "D:/GUSEProjects/SummerEngine/lib/libglfw3.a"
+		},
+		{
+			"backtrace" : 3,
+			"fragment" : "D:/GUSEProjects/SummerEngine/lib/steam_api.a"
+		}
+	],
+	"name" : "SummerEngine",
+	"nameOnDisk" : "SummerEngine.exe",
+	"orderDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "CopyAssets::@6890427a1f51a3e7e1df"
+		}
+	],
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Core/Engine.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Core/EnginePanel.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Core/EngineUI.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Core/Input.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Core/Utility/FileReader.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Core/Utility/Utility.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/SummerEngine/Core/glad.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Graphics/EBO.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Graphics/MaterialData.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Graphics/Renderer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Graphics/ShaderData.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Graphics/VAO.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Graphics/VBO.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Graphics/stb_image.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Networking/NetworkManager.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Networking/Packet.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Networking/SteamTransport.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Scene/Component.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Scene/Components/Camera.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Scene/Components/Light.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Scene/Components/Mesh.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Scene/Components/RectTransform.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Scene/Components/Transform.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Scene/Components/UIButton.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Scene/Components/UIImage.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Scene/Object.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/main.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

@@ -3,6 +3,7 @@
 #include <glm/glm.hpp>
 #include "Component.h"
 #include <vector>
+#include <format>
 
 class Engine;
 class Component;
@@ -14,6 +15,7 @@ public:
 
     Object *parent;
 
+    std::string name;
     std::vector<Component*> components;
 
     Object();

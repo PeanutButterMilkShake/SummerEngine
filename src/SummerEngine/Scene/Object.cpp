@@ -7,6 +7,7 @@ Object::Object()
     id = Engine::objects.size();
     Engine::AddObject(this);
     parent = nullptr;
+    name = id == 0 ? "New object" : std::format("New object ({})", id);
 }
 
 Object::~Object()
@@ -36,6 +37,6 @@ void Object::SteppedUpdate(float delta)
 {
     for(Component* component : components)
     {
-        component->SteppedUpdate(delta); //Change to component->SteppedUpdate
+        component->SteppedUpdate(delta);
     }
 }

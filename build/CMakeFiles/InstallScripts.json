@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"D:/GUSEProjects/GUSEGraphicsEngine/build/cmake_install.cmake"
+		"D:/GUSEProjects/SummerEngine/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

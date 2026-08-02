@@ -3,14 +3,22 @@
 #include <unordered_map>
 #include <cstdint>
 
+template<typename... Args>
+class Event;
+
+template<typename... Args>
 struct Listener
 {
-    Event<>* event;
-    uint32_t id;
+public:
+    Event<Args...>* event = nullptr;
+    uint32_t id = 0;
 
     void StopListening()
     {
-        event->StopListening(id);
+        if (event)
+        {
+            event->StopListening(id);
+        }
     }
 };
 
@@ -21,22 +29,22 @@ public:
     using EventCallback = std::function<void(Args...)>;
 
     // 1. Standard Listen (for free functions and lambdas)
-    uint32_t Listen(EventCallback callback)
+    Listener<Args...> AddListener(EventCallback callback)
     {
         uint32_t id = m_nextId++;
         m_listeners[id] = callback;
 
-        Listener listener;
+        Listener<Args...> listener;
         listener.event = this;
-        listener.id = id
+        listener.id = id;
 
         return listener;
     }
 
     template <typename T>
-    uint32_t Listen(T* instance, void (T::*memberFunction)(Args...))
+    Listener<Args...> AddListener(T* instance, void (T::*memberFunction)(Args...))
     {
-        return Listen([instance, memberFunction](Args... args) {
+        return AddListener([instance, memberFunction](Args... args) {
             (instance->*memberFunction)(args...);
         });
     }

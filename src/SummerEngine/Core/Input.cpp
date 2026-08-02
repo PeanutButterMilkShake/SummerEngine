@@ -27,7 +27,7 @@ glm::vec2 Input::GetInputVector2(KeyCode negativeX, KeyCode positiveX, KeyCode n
     return inputVector;
 }
 
-int Input::KeyCodeToGLFW(KeyCode keycode)
+int Input::KeyCodeToGLFW(KeyCode keycode) //make this better bruh what is this
 {
     switch (keycode)
     {
@@ -69,4 +69,27 @@ int Input::KeyCodeToGLFW(KeyCode keycode)
 
     default: return GLFW_KEY_UNKNOWN;
     }
+}
+
+Vector2 Input::GetMousePosition()
+{
+    double x,y;
+    glfwGetCursorPos(window, &x, &y);
+
+    return Vector2(x,y);
+}
+
+bool Input::GetMouseButtonDown(int button)
+{
+    return glfwGetMouseButton(window, button);
+}
+
+bool Input::GetMouse0Down()
+{
+    return glfwGetMouseButton(window, 0);
+}
+
+bool Input::GetMouse1Down()
+{
+    return glfwGetMouseButton(window, 0);
 }
