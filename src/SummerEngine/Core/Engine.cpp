@@ -86,10 +86,6 @@ void Engine::Initialize(string name)
     glfwSetErrorCallback(ErrorCallback);
     glfwSetFramebufferSizeCallback(window, WindowResizeCallback);
 
-    // Enable OpenGL graphics stuff? idk the word yet
-    glEnable(GL_DEPTH_TEST);
-    glEnable(GL_CULL_FACE);
-
     Input::window = window;
     
     // TEMP CHANGE WHEN ENGINE UI STUFF
@@ -136,7 +132,10 @@ void Engine::Update()
     CalculateTimeData();
 
     for (Object *object : Engine::objects)
-        object->Update(delta);
+    {
+        if(object->enabled)
+            object->Update(delta);
+    }
 
     Renderer::Render();
 }

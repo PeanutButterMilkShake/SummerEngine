@@ -87,6 +87,11 @@ struct Vector2
         return Vector2{ x / other.x, y / other.y };
     }
 
+    Vector2 operator/(const float& scalar) const 
+    {
+        return Vector2{ x / scalar, y / scalar };
+    }
+
     bool operator==(const Vector2& other) const
     {
         return other.x == x && other.y == y;

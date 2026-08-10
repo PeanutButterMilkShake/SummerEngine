@@ -20,6 +20,10 @@ struct MeshData : public Resource
     VBO vbo;
     EBO ebo;
 
+    // 1. Default constructor for programmatic/dynamic meshes (like text)
+    MeshData() = default;
+
+    // 2. Constructor for loading from file paths
     MeshData(std::string filePath)
     {
         ReadMeshFile(filePath, vertices, indices, normals, uvs);
@@ -63,8 +67,14 @@ struct MeshData : public Resource
         GLsizei strideBytes = strideFloats * sizeof(float);
 
         vao.Bind();
+        
         vbo.SetData(interleaved.data(), interleaved.size() * sizeof(float));
-        // (Optional: You can skip ebo.SetData entirely since you aren't indexing)
+
+        // Handle EBO data upload if indices are present
+        if (!indices.empty())
+        {
+            ebo.SetData(indices.data(), indices.size() * sizeof(unsigned int));
+        }
 
         size_t offset = 0;
         vao.LinkAttrib(vbo, 0, 3, GL_FLOAT, strideBytes, (void*)offset);
@@ -84,5 +94,9 @@ struct MeshData : public Resource
 
         vao.Unbind();
         vbo.Unbind();
+        if (!indices.empty())
+        {
+            ebo.Unbind();
+        }
     }
 };

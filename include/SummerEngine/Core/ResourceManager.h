@@ -25,12 +25,14 @@ namespace ResourceManager
 
         auto& cache = GetCache<T>();
 
+        // Attempt to find resource
         auto it = cache.find(key);
         if (it != cache.end())
         {
             return it->second;
         }
 
+        // Create resource if not existing
         std::shared_ptr<T> resource;
 
         if constexpr (sizeof...(Args) == 0)
@@ -41,8 +43,6 @@ namespace ResourceManager
         {
             resource = std::make_shared<T>(std::forward<Args>(args)...);
         }
-
-        printf(std::format("made new material with key: {}\n", key).c_str());
 
         cache[key] = resource;
         return resource;
@@ -56,12 +56,12 @@ namespace ResourceManager
 
         auto& cache = GetCache<T>();
 
-        printf(std::format("looking for material with key: {}\n", key).c_str());
-
         auto it = cache.find(key);
         if (it != cache.end())
         {
             return it->second;
         }
+        
+        return nullptr;
     }
 }

@@ -208,7 +208,10 @@
 				23,
 				24,
 				25,
-				26
+				26,
+				27,
+				28,
+				29
 			]
 		},
 		{
@@ -439,7 +442,10 @@
 				23,
 				24,
 				25,
-				26
+				26,
+				27,
+				28,
+				29
 			]
 		}
 	],
@@ -532,6 +538,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Graphics/stb_truetype.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "src/SummerEngine/Networking/NetworkManager.cpp",
 			"sourceGroupIndex" : 0
 		},
@@ -593,6 +605,18 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/SummerEngine/Scene/Components/UIImage.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Scene/Components/UIListLayout.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/SummerEngine/Scene/Components/UIText.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

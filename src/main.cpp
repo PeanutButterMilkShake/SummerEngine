@@ -6,6 +6,7 @@
 #include "RectTransform.h"
 #include "UIImage.h"
 #include "UIButton.h"
+#include "UIText.h"
 
 int main()
 {   
@@ -19,7 +20,6 @@ int main()
     sun.AddComponent<Transform>();
     sun.AddComponent<Light>();
     sun.GetComponent<Transform>()->rotation = Quaternion::FromEuler(100, 0, 0);
-
 
     engine.ResetTime();
 
