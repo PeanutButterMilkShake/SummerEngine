@@ -4,17 +4,54 @@ project(SummerEngine_Project CXX C)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# 1. Gather all source files (Engine files + main.cpp)
-file(GLOB_RECURSE ENGINE_SOURCES CONFIGURE_DEPENDS "src/SummerEngine/*.cpp" "src/SummerEngine/*.c")
+# ==========================================
+# 1. PYTHON REFLECTION PARSER TARGET
+# ==========================================
 
-# 2. Create the Executable directly with all sources
-add_executable(SummerEngine ${ENGINE_SOURCES} src/main.cpp)
+set(GEN_DIR "${CMAKE_CURRENT_SOURCE_DIR}/build/generated")
 
+# 1A. Run during CONFIGURE phase (Fixes the "Cannot find source file" error)
+message(STATUS "Running Python Reflection Parser immediately for CMake Configuration...")
+execute_process(
+    COMMAND python "${CMAKE_CURRENT_SOURCE_DIR}/Tools/ReflectionParser.py"
+    WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
+)
+
+# 1B. Run during BUILD phase (Catches live updates when you edit code and hit compile)
+add_custom_target(GenerateReflection ALL
+    COMMAND python "${CMAKE_CURRENT_SOURCE_DIR}/Tools/ReflectionParser.py"
+    WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
+    COMMENT "Generating SPROPERTY() companion headers..."
+)
+
+# ==========================================
+# 2. SOURCE GATHERING & PATH MAPPING
+# ==========================================
+
+# Glob the ORIGINAL files
+file(GLOB_RECURSE RAW_ENGINE_SOURCES CONFIGURE_DEPENDS "src/SummerEngine/*.cpp" "src/SummerEngine/*.c")
+
+# Map the original source paths to the GENERATED folder paths
+set(ENGINE_SOURCES "")
+# Compile the original sources directly. Generated files are companion headers only.
+file(GLOB_RECURSE ENGINE_SOURCES CONFIGURE_DEPENDS "src/*.cpp" "src/*.c")
+add_executable(SummerEngine ${ENGINE_SOURCES})
+
+# Tell CMake to wait for the Python script to finish updating files before compiling
+add_dependencies(SummerEngine GenerateReflection)
+
+# ==========================================
 # 3. AUTOMATIC INCLUDE PATH MAPPING
-file(GLOB_RECURSE ALL_HEADERS CONFIGURE_DEPENDS "src/SummerEngine/*.h" "src/SummerEngine/*.hpp" "include/*.h" "include/*.hpp")
+# ==========================================
+
+# Glob the ORIGINAL headers
+file(GLOB_RECURSE RAW_HEADERS CONFIGURE_DEPENDS "src/SummerEngine/*.h" "src/SummerEngine/*.hpp" "include/*.h" "include/*.hpp")
+
 set(HEADER_DIRS "")
-foreach(HEADER_PATH ${ALL_HEADERS})
-    get_filename_component(DIR ${HEADER_PATH} DIRECTORY)
+foreach(HEADER_PATH ${RAW_HEADERS})
+    # Map the header path to the GENERATED folder so CMake looks at the mirrored files
+    string(REPLACE "${CMAKE_CURRENT_SOURCE_DIR}/" "${GEN_DIR}/" GEN_HEADER "${HEADER_PATH}")
+    get_filename_component(DIR ${GEN_HEADER} DIRECTORY)
     list(APPEND HEADER_DIRS ${DIR})
 endforeach()
 
@@ -22,11 +59,29 @@ if(HEADER_DIRS)
     list(REMOVE_DUPLICATES HEADER_DIRS)
 endif()
 
+# Point to the GENERATED directories instead of the raw ones
+# Keep original include paths for source navigation and same-directory includes,
+# then add generated companion paths.
+file(GLOB_RECURSE ORIGINAL_HEADERS CONFIGURE_DEPENDS "include/*.h" "include/*.hpp" "src/*.h" "src/*.hpp")
+set(ORIGINAL_HEADER_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/include" "${CMAKE_CURRENT_SOURCE_DIR}/src")
+foreach(ORIGINAL_HEADER ${ORIGINAL_HEADERS})
+    get_filename_component(ORIGINAL_HEADER_DIR ${ORIGINAL_HEADER} DIRECTORY)
+    list(APPEND ORIGINAL_HEADER_DIRS ${ORIGINAL_HEADER_DIR})
+endforeach()
+list(REMOVE_DUPLICATES ORIGINAL_HEADER_DIRS)
+
+file(GLOB_RECURSE GENERATED_HEADERS CONFIGURE_DEPENDS "${GEN_DIR}/*.generated.h")
+set(GENERATED_HEADER_DIRS "${GEN_DIR}")
+foreach(GENERATED_HEADER ${GENERATED_HEADERS})
+    get_filename_component(GENERATED_HEADER_DIR ${GENERATED_HEADER} DIRECTORY)
+    list(APPEND GENERATED_HEADER_DIRS ${GENERATED_HEADER_DIR})
+endforeach()
+list(REMOVE_DUPLICATES GENERATED_HEADER_DIRS)
+
 target_include_directories(SummerEngine PRIVATE 
-    ${HEADER_DIRS}
-    "${CMAKE_CURRENT_SOURCE_DIR}/include"
-    "${CMAKE_CURRENT_SOURCE_DIR}/src"
-    "${CMAKE_CURRENT_SOURCE_DIR}/lib"   # <--- Added /lib so headers inside lib can be found if needed
+    ${ORIGINAL_HEADER_DIRS}
+    ${GENERATED_HEADER_DIRS}
+    "${CMAKE_CURRENT_SOURCE_DIR}/lib"
 )
 
 # ==========================================
@@ -36,7 +91,6 @@ target_include_directories(SummerEngine PRIVATE
 set(LOCAL_LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/lib")
 
 # 1. GLFW Library (Looking inside /lib)
-# Adjust the filename if yours is named differently (e.g., glfw3.lib or libglfw3.a)
 if(EXISTS "${LOCAL_LIB_DIR}/libglfw3.a")
     set(GLFW_LIBRARY "${LOCAL_LIB_DIR}/libglfw3.a")
 elseif(EXISTS "${LOCAL_LIB_DIR}/glfw3.lib")

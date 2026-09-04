@@ -5,12 +5,23 @@ out vec4 FragColor;
 
 uniform sampler2D textAtlas;
 uniform vec3 baseColor;
+uniform vec4 clipBounds;
+uniform float weight;
 
 void main()
 {
-    vec2 texelSize = {1. / 1024, 1./ 1024};
+    if (gl_FragCoord.x < clipBounds.x || gl_FragCoord.x > clipBounds.z || gl_FragCoord.y < clipBounds.y || gl_FragCoord.y > clipBounds.w)
+    {
+        discard;
+    }
+
+    vec2 texelSize = vec2(1.0 / 1024.0, 1.0 / 1024.0);
 
     const float onEdge = 180.0 / 255.0;
+    
+    // Adjust the edge threshold based on weight.
+    // A positive weight value lowers the threshold, expanding the glyph pixels (making it bold).
+    float threshold = onEdge - weight;
 
     float d0 = texture(textAtlas, UV - vec2(texelSize.x * 0.5, 0.0)).r;
     float d1 = texture(textAtlas, UV).r;
@@ -18,9 +29,9 @@ void main()
 
     float w = fwidth(d1) * 0.7;
 
-    float a0 = smoothstep(onEdge - w, onEdge + w, d0);
-    float a1 = smoothstep(onEdge - w, onEdge + w, d1);
-    float a2 = smoothstep(onEdge - w, onEdge + w, d2);
+    float a0 = smoothstep(threshold - w, threshold + w, d0);
+    float a1 = smoothstep(threshold - w, threshold + w, d1);
+    float a2 = smoothstep(threshold - w, threshold + w, d2);
 
     float alpha = (a0 + a1 + a2) / 3.0;
     if (alpha < 0.01) discard;

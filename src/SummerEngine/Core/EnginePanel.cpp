@@ -12,7 +12,7 @@ EnginePanel::EnginePanel(std::string _title, std::string _category, Vector2 _def
     tabObject->name = title + " tab";
 
     // Create title Icon
-    Object* tabIconObject = new Object();
+    EngineObject* tabIconObject = new EngineObject();
     tabIconObject->SetParent(tabObject);
 
     RectTransform* iconTransform = tabIconObject->AddComponent<RectTransform>();
@@ -22,17 +22,18 @@ EnginePanel::EnginePanel(std::string _title, std::string _category, Vector2 _def
 
     UIImage* icon = tabIconObject->AddComponent<UIImage>();
     icon->material = EngineUIColors::engineUIMaterials["Image"];
-    icon->texture = ResourceManager::CreateResource<Texture>(title  + " tab Icon", iconPath);
+    icon->texture = ResourceManager::CreateResource<Texture>(title  + " tab icon", iconPath);
 
     // Create title Text
-    Object* tabTextObject = new Object();
+    EngineObject* tabTextObject = new EngineObject();
     tabTextObject->SetParent(tabObject);
 
     RectTransform* textTransform = tabTextObject->AddComponent<RectTransform>();
     textTransform->sizeScale = {1,1};
-    textTransform->pivot = {0,0};
+    textTransform->pivot = {.5};
     textTransform->sizeOffset = {0,0};
     textTransform->positionOffset = {27,0};
+    textTransform->positionScale = {.5,.5};
 
     UIText* tabText = tabTextObject->AddComponent<UIText>();
     tabText->material = EngineUIColors::engineUIMaterials["TextBody"];
@@ -40,7 +41,28 @@ EnginePanel::EnginePanel(std::string _title, std::string _category, Vector2 _def
     tabText->text = title;
     tabText->verticalAlignment = UIAlignmentVertical::Center;
     tabText->horizontalAlignment = UIAlignmentHorizontal::Left;
-    tabText->fontSize = 20;
+    tabText->fontSize = 16;
 
     tabObject->enabled = false;
+
+    // Create content object
+    RectTransform* contentTransform = content->AddComponent<RectTransform>();
+    contentTransform->sizeOffset = {0,-25};
+    contentTransform->sizeScale = {1,1};
+    contentTransform->positionOffset = {0,25};
+    contentTransform->pivot = {0,0};
+    
+    UIListLayout* contentLayout = content->AddComponent<UIListLayout>();
+    contentLayout->layoutAxis = UIAxis::Vertical;
+    contentLayout->horizontalAlignment = UIAlignmentHorizontal::Center;
+    contentLayout->paddingOffset = {0,3};
+
+    UIScrollView* contentScrollView = content->AddComponent<UIScrollView>();
+    contentScrollView->scrollDirection = UIAxis::Vertical;
+    contentScrollView->scrollSpeed = 5;
+    contentScrollView->scrollViewSize = {0,-2};
+
+    content->name = title + " Content";
+
+    content->enabled = false;
 }

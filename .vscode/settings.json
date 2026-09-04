@@ -1,3 +1,10 @@
 {
-    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "cmake.cmakePath": "C:\\msys64\\ucrt64\\bin\\cmake.exe",
+        "files.exclude": {
+        "**/build": false
+    },
+    "search.exclude": {
+        "**/build": true
+    },
 }

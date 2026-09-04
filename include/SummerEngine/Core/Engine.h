@@ -15,13 +15,16 @@
 #include "NetworkManager.h"
 #include "EngineUI.h"
 
+class EngineObject;
 class Object;
 class Light;
 
 class Engine
 {
 public:
-    GLFWwindow *window;
+    static Engine* singleton;
+    static GLFWwindow *window;
+    static std::vector<EngineObject*> engineObjects;
     static std::vector<Object*> objects;
     static Camera* mainCamera;
     static float delta;
@@ -29,14 +32,39 @@ public:
     static std::vector<Light*> lights;
     static Vector2 windowDimensions;
     static EngineUI* engineUI;
+    static bool heirarchyDirty;
+    static std::vector<Object*> selectedObjects;
 
     // TEMP CHANGE WHEN ENGINE UI STUFF
     static GLuint whiteTextureId;
 
-    static void AddObject(Object *object)
+    static void AddObject(Object* object)
     {
         objects.push_back(object);
+
+        if (engineUI != nullptr)
+        {
+            heirarchyDirty = true;
+        }
     }
+
+    static void RemoveObject(Object* object)
+    {
+        auto it = std::find(objects.begin(), objects.end(), object);
+        if (it != objects.end()) *it = nullptr;
+    }
+
+    static void AddEngineObject(EngineObject* object)
+    {
+        engineObjects.push_back(object);
+    }
+
+    static void RemoveEngineObject(EngineObject* object)
+    {
+        auto it = std::find(engineObjects.begin(), engineObjects.end(), object);
+        if (it != engineObjects.end()) *it = nullptr;
+    }
+
 
     Engine(string name);
     ~Engine();
@@ -50,5 +78,5 @@ public:
     static void APIENTRY OpenGLDebugCallback(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar* message, const void* userParam);
 
 private:
-    float lastFrame;
+    float lastFrame;;
 };

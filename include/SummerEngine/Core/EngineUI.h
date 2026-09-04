@@ -3,6 +3,15 @@
 #include "MathTypes.h"
 #include "ResourceManager.h"
 #include "MaterialData.h"
+#include "PanelContent.h"
+#include <unordered_map>
+#include <string>
+#include <memory>
+
+class Object;
+class EngineObject;
+class EnginePanel;
+class UIImage;
 
 struct EngineUIColors
 {
@@ -24,6 +33,10 @@ private:
         ColorData("PanelForeground", Color3(0.11765f, 0.11765f, 0.18039f)),
         ColorData("PanelRibbon", Color3(0.06667f, 0.06667f, 0.10588f)),
         ColorData("TextBody", Color3(0.80392f, 0.83922f, 0.95686f)),
+        ColorData("ButtonHighlight", Color3(0.19215f, 0.19607f, 0.26666f)),
+        ColorData("ButtonPress", Color3(0.27058f, 0.27843f, 0.35294f)),
+
+        ColorData("N/A", Color3(1,0,1)),
     };
 
 public:
@@ -52,5 +65,12 @@ public:
 class EngineUI
 {
 public:
+    static EngineUI* singleton;
+
+    std::vector<PanelContent*> panels;
+
     EngineUI();
+    void Update();
+    
+private:
 };

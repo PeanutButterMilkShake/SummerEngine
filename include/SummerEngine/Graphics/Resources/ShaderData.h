@@ -20,6 +20,7 @@ public:
     void SetFloat(const std::string &name, const float &value);
     void SetVector2(const std::string &name, const Vector2 &value);
     void SetVector3(const std::string &name, const Vector3 &value);
+    void SetVector4(const std::string &name, const glm::vec4 &value); //TODO change this to Vector4
     void SetMat4(const std::string &name, const glm::mat4 &mat);
 
     void InspectShaderTextures();

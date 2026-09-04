@@ -1,0 +1,111 @@
+
+#pragma once
+#include "PropertyUI.h"
+#include "EngineObject.h"
+#include "RectTransform.h"
+#include "UIText.h"
+#include "UIImage.h"
+#include "EngineUI.h"
+
+class Vector3PropertyUI : public PropertyUI
+{
+public:
+    EngineObject* BuildUI(const std::string& propertyName, const std::string& propertyValue, std::function<void(const std::string&)> setPropertyValue)
+    {
+        EngineObject* rowObject = BuildPropertyRow(propertyName);
+        
+        float x = 0.0f, y = 0.0f, z = 0.0f;
+        sscanf(propertyValue.c_str(), "%f,%f,%f", &x, &y, &z);
+        
+        UITextField* textFields[3] = { nullptr, nullptr };
+
+        for(int i=0; i < 3; i++)
+        {
+            float currentElement = x;
+            if(i==1)
+            {
+                currentElement = y;
+            }
+            else
+            {
+                currentElement = z;
+            }
+
+            EngineObject* propertyObject = new EngineObject();
+            propertyObject->SetParent(rowObject);
+
+            RectTransform* propertyTransform = propertyObject->AddComponent<RectTransform>();
+            propertyTransform->sizeScale = {.16666, 1};
+            propertyTransform->sizeOffset = {-5,0};
+            propertyTransform->positionOffset = {5,0};
+            propertyTransform->positionScale = {.4f + (.16666f * i), 0};
+            propertyTransform->pivot = {0};
+
+            UIImage* propertyBackground = propertyObject->AddComponent<UIImage>();
+            propertyBackground->material = EngineUIColors::engineUIMaterials["PanelRibbon"];
+
+            UIButton* propertyButton = propertyObject->AddComponent<UIButton>();    
+            UITextField* propertyTextField = propertyObject->AddComponent<UITextField>();
+            propertyTextField->fieldType = FieldType::Numbers;
+            textFields[i] = propertyTextField;
+
+            EngineObject* propertyTextObject = new EngineObject();
+            propertyTextObject->SetParent(propertyObject);
+
+            RectTransform* propertyTextTransform = propertyTextObject->AddComponent<RectTransform>();
+            propertyTextTransform->sizeScale = {1};
+            propertyTextTransform->sizeOffset = {0};
+            propertyTextTransform->positionOffset = {5,0};
+            propertyTextTransform->pivot = {0};
+            
+            UIText* propertyText = propertyTextObject->AddComponent<UIText>();
+            propertyText->material = EngineUIColors::engineUIMaterials["TextBody"];
+            propertyText->fontFilePath = "assets/Fonts/JetBrainsMono-Regular.ttf";
+            propertyText->verticalAlignment = UIAlignmentVertical::Center;
+            propertyText->horizontalAlignment = UIAlignmentHorizontal::Left;
+            propertyText->fontSize = 16;
+            propertyTextField->textObject = propertyText;
+
+            std::string stringValue = std::to_string(currentElement);
+            std::string newString;
+            if (currentElement != (int)currentElement)
+            {
+                int lastNonZero = 0;
+                for(int j = 0; j < stringValue.length(); j++)
+                {
+                    if(stringValue.at(j) != '0')
+                    {
+                        lastNonZero = j;
+                    }
+                }
+
+                newString = std::to_string(currentElement).substr(0, lastNonZero + 1);
+            }
+            else
+            {
+                newString = std::to_string((int)currentElement);
+            }
+
+            propertyTextField->text = newString;
+        }
+
+        UITextField* fieldX = textFields[0];
+        UITextField* fieldY = textFields[1];
+        UITextField* fieldZ = textFields[2];
+
+        auto submitVector = [fieldX, fieldY, fieldZ, setPropertyValue]() 
+        {
+            if (fieldX && fieldY && fieldZ)
+            {
+                std::string combined = fieldX->text + "," + fieldY->text;
+                setPropertyValue(combined);
+            }
+        };
+
+        if (fieldX) fieldX->onSubmit.AddListener(submitVector);
+        if (fieldY) fieldY->onSubmit.AddListener(submitVector);
+        if (fieldZ) fieldZ->onSubmit.AddListener(submitVector);
+
+        return rowObject;
+    }
+};

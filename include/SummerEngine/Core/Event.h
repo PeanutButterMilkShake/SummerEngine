@@ -28,6 +28,11 @@ class Event
 public:
     using EventCallback = std::function<void(Args...)>;
 
+    ~Event()
+    {
+        Clear();
+    }
+
     // 1. Standard Listen (for free functions and lambdas)
     Listener<Args...> AddListener(EventCallback callback)
     {

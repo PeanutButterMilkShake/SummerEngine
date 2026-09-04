@@ -71,6 +71,10 @@ public:
 
         wrapMode = WrapMode::EdgeClamp;
 
+        // FIX: Map the Red channel to R, G, and B so every GPU sees monochrome white instead of pure RED
+        GLint swizzleMask[] = { GL_RED, GL_RED, GL_RED, GL_RED };
+        glTexParameteriv(GL_TEXTURE_2D, GL_TEXTURE_SWIZZLE_RGBA, swizzleMask);
+
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, filterMode);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, filterMode);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, wrapMode);

@@ -1,9 +1,8 @@
 #pragma once
-
 #include "MathTypes.h"
 #include "Component.h"
 #include "Engine.h"
-
+#include "Light.h.generated.h"
 enum LightType
 {
     Directional, // 0
@@ -19,6 +18,9 @@ public:
     ~Light();
 
     Color3 color = Color3(1,1,1);
+    SPROPERTY();
     float strength = 1;
     LightType type = LightType::Directional;
+
+    GENERATED_BODY();
 };

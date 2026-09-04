@@ -7,19 +7,27 @@
 #include "UIImage.h"
 #include "UIButton.h"
 #include "UIText.h"
+#include "WorkspaceManager.h"
+#include "EngineUI.h"
 
 int main()
 {   
     Engine engine = Engine("Summer Engine");
 
-    Object playerObject;
-    playerObject.AddComponent<Transform>()->position = Vector3(0,0,-5);
-    playerObject.AddComponent<Camera>();
+    Object* playerObject = new Object();
+    playerObject->name = "Player";
+    playerObject->AddComponent<Transform>()->position = Vector3(0, 0, -5);
+    playerObject->AddComponent<Camera>();
 
-    Object sun;
-    sun.AddComponent<Transform>();
-    sun.AddComponent<Light>();
-    sun.GetComponent<Transform>()->rotation = Quaternion::FromEuler(100, 0, 0);
+    Object* playerMesh = new Object();
+    playerMesh->name = "Mesh";
+    playerMesh->SetParent(playerObject);
+
+    Object* obj1 = new Object();
+    obj1->name = "obj1";
+
+    Object* obj2 = new Object();
+    obj2->name = "obj2";
 
     engine.ResetTime();
 
@@ -36,6 +44,10 @@ int main()
         if (Input::IsKeyDown(KeyCode::X))
             glfwSetWindowShouldClose(engine.window, 1);
     }
+
+    delete playerObject;
+    delete obj1;
+    delete obj2;
 
     glfwTerminate();
     return 0;

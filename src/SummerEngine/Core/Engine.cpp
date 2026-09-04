@@ -2,8 +2,13 @@
 #include "Object.h"
 #include "Renderer.h"
 #include "Light.h"
+#include "EngineObject.h"
+#include "WorkspaceManager.h"
 
+Engine* Engine::singleton = nullptr;
+GLFWwindow* Engine::window = nullptr;
 std::vector<Object*> Engine::objects;
+std::vector<EngineObject*> Engine::engineObjects;
 std::vector<Light*> Engine::lights;
 Camera* Engine::mainCamera = nullptr;
 float Engine::delta;
@@ -11,9 +16,12 @@ int Engine::fps;
 Vector2 Engine::windowDimensions = Vector2(960, 600);
 GLuint Engine::whiteTextureId = 0;
 EngineUI* Engine::engineUI = nullptr;
+bool Engine::heirarchyDirty = false;
+std::vector<Object*> Engine::selectedObjects;
 
 Engine::Engine(string name)
 {
+    singleton = this;
     Initialize(name);
 }
 
@@ -24,20 +32,19 @@ Engine::~Engine()
 
 void APIENTRY Engine::OpenGLDebugCallback(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar* message, const void* userParam)
 {
-    if (severity == GL_DEBUG_SEVERITY_NOTIFICATION) return;
+if (severity == GL_DEBUG_SEVERITY_NOTIFICATION) return;
 
-    std::cerr << "\n----------------OPENGL ERROR----------------" << std::endl;
-    std::cerr << "Message: " << message << std::endl;
-    
-    switch (type) {
-        case GL_DEBUG_TYPE_ERROR:               std::cerr << "Type: Error"; break;
-        case GL_DEBUG_TYPE_DEPRECATED_BEHAVIOR: std::cerr << "Type: Deprecated Behavior"; break;
-        case GL_DEBUG_TYPE_UNDEFINED_BEHAVIOR:  std::cerr << "Type: Undefined Behavior"; break;
-        case GL_DEBUG_TYPE_PORTABILITY:         std::cerr << "Type: Portability Issue"; break;
-        case GL_DEBUG_TYPE_PERFORMANCE:         std::cerr << "Type: Performance Warning"; break;
-        default:                                std::cerr << "Type: Other"; break;
-    }
-    std::cerr << "\n--------------------------------------------\n" << std::endl;
+std::cerr << "\nOPENGL ERROR" << std::endl;
+std::cerr << "Message: " << message << std::endl;
+
+switch (type) {
+    case GL_DEBUG_TYPE_ERROR:               std::cerr << "Type: Error"; break;
+    case GL_DEBUG_TYPE_DEPRECATED_BEHAVIOR: std::cerr << "Type: Deprecated Behavior"; break;
+    case GL_DEBUG_TYPE_UNDEFINED_BEHAVIOR:  std::cerr << "Type: Undefined Behavior"; break;
+    case GL_DEBUG_TYPE_PORTABILITY:         std::cerr << "Type: Portability Issue"; break;
+    case GL_DEBUG_TYPE_PERFORMANCE:         std::cerr << "Type: Performance Warning"; break;
+    default:                                std::cerr << "Type: Other"; break;
+}
 }
 
 void Engine::Initialize(string name)
@@ -47,7 +54,7 @@ void Engine::Initialize(string name)
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    
+
     // REQUIRE A DEBUG CONTEXT FOR AUTOMATIC ERROR LOGGING
     glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, GLFW_TRUE);
 
@@ -87,7 +94,8 @@ void Engine::Initialize(string name)
     glfwSetFramebufferSizeCallback(window, WindowResizeCallback);
 
     Input::window = window;
-    
+    Input::SetupInputCallbacks();
+
     // TEMP CHANGE WHEN ENGINE UI STUFF
     glGenTextures(1, &whiteTextureId);
     glBindTexture(GL_TEXTURE_2D, whiteTextureId);
@@ -130,17 +138,31 @@ void Engine::ResetTime()
 void Engine::Update()
 {
     CalculateTimeData();
+    engineUI->Update();
 
-    for (Object *object : Engine::objects)
+    for (size_t i = 0; i < Engine::objects.size(); ++i)
     {
-        if(object->enabled)
+        Object* object = Engine::objects[i];
+        if (object != nullptr && object->enabled)
             object->Update(delta);
     }
 
+    for (size_t i = 0; i < Engine::engineObjects.size(); ++i)
+    {
+        EngineObject* object = Engine::engineObjects[i];
+        if (object != nullptr && object->enabled)
+            object->Update(delta);
+    }
+
+    Input::Update();
     Renderer::Render();
+
+    std::erase(Engine::objects, nullptr);
+    std::erase(Engine::engineObjects, nullptr);
 }
 
-void Engine::ErrorCallback(int error, const char* description) {
+void Engine::ErrorCallback(int error, const char* description) 
+{
     std::cerr << "GLFW Error (" << error << "): " << description << std::endl;
 }
 

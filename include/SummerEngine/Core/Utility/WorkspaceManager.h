@@ -3,16 +3,17 @@
 #include "EnginePanel.h"
 #include "EngineUI.h"
 #include "UIListLayout.h"
+#include "UIScrollView.h"
 
 class WorkspaceManager
 {
 public:
 
-    inline static std::unordered_map<PanelLocation, Object*> panels = {
-        //{PanelLocation::Top, new Object()},
-        //{PanelLocation::Bottom, new Object()},
-        {PanelLocation::Left, new Object()},
-        {PanelLocation::Right, new Object()},
+    inline static std::unordered_map<PanelLocation, EngineObject*> panels = {
+        //{PanelLocation::Top, new EngineObject()},
+        {PanelLocation::Bottom, new EngineObject()},
+        {PanelLocation::Left, new EngineObject()},
+        {PanelLocation::Right, new EngineObject()},
     };
 
     inline static std::unordered_map<PanelLocation, std::vector<EnginePanel*>> panelsInLocation = {
@@ -24,10 +25,11 @@ public:
 
     static void SetupEngineUI()
     {
-        for(std::pair<const PanelLocation, Object*> const& pair : panels)
+        for(std::pair<const PanelLocation, EngineObject*> const& pair : panels)
         {
             PanelLocation location = pair.first;
-            Object* panelObject = pair.second;
+            EngineObject* panelObject = pair.second;
+            panelObject->name = "Panel";
 
             // Setup panel positioning
             RectTransform* transform = panelObject->AddComponent<RectTransform>();
@@ -42,6 +44,18 @@ public:
                 transform->pivot = {1,0};
                 transform->positionScale = {1,0};
             }
+            else if(location == PanelLocation::Top)
+            {
+                transform->sizeScale = {.6,.25};
+                transform->pivot = {0,0};
+                transform->positionScale = {.2,0};
+            }
+            else if(location == PanelLocation::Bottom)
+            {
+                transform->sizeScale = {.6,.25};
+                transform->pivot = {0,1};
+                transform->positionScale = {.2,1};
+            }
             
             transform->sizeOffset = {0,0};
             
@@ -49,7 +63,7 @@ public:
             panelObject->AddComponent<UIImage>()->material = EngineUIColors::engineUIMaterials["PanelBackground"];
             
             // Create tab ribbon
-            Object* tabRibbon = new Object();
+            EngineObject* tabRibbon = new EngineObject();
             tabRibbon->name = "Ribbon";
             tabRibbon->SetParent(panelObject);
 
@@ -57,14 +71,36 @@ public:
             ribbonTransform->sizeScale = {1,0};
             ribbonTransform->sizeOffset = {0,25};
             ribbonTransform->pivot = {0,0};
+            ribbonTransform->clipChildren = true;
 
             UIImage* ribbon = tabRibbon->AddComponent<UIImage>();
             ribbon->material = EngineUIColors::engineUIMaterials["PanelRibbon"];
 
             tabRibbon->AddComponent<UIListLayout>()->paddingOffset.x = 2;
+            UIScrollView* scrollView = tabRibbon->AddComponent<UIScrollView>();
+            scrollView->scrollDirection = UIAxis::Horizontal;
+            scrollView->scrollViewSize = {2,0};
+            scrollView->invertedScrollView = true;
+            scrollView->scrollSpeed = 35;
 
             panelObject->enabled = false;
         }
+    }
+
+    static EnginePanel* GetPanel(std::string name)
+    {
+        for(std::pair<const PanelLocation, std::vector<EnginePanel*>> const& pair : panelsInLocation)
+        {
+            for(EnginePanel* panel : pair.second)
+            {
+                if(panel->content->name.find(name) != std::string::npos)
+                {
+                    return panel;
+                }
+            }
+        }
+
+        return nullptr;
     }
 
     static EnginePanel* RegisterPanel(std::string title, std::string category, PanelLocation defaultLocation, std::string iconPath)
