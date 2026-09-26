@@ -50,13 +50,13 @@
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 41,
+				"line" : 143,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 143,
+				"line" : 41,
 				"parent" : 0
 			},
 			{
@@ -369,11 +369,11 @@
 	[
 		{
 			"backtrace" : 4,
-			"id" : "GenerateReflection::@6890427a1f51a3e7e1df"
+			"id" : "CopyAssets::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 5,
-			"id" : "CopyAssets::@6890427a1f51a3e7e1df"
+			"id" : "GenerateReflection::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "SummerEngine::@6890427a1f51a3e7e1df",
@@ -452,11 +452,11 @@
 	[
 		{
 			"backtrace" : 4,
-			"id" : "GenerateReflection::@6890427a1f51a3e7e1df"
+			"id" : "CopyAssets::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 5,
-			"id" : "CopyAssets::@6890427a1f51a3e7e1df"
+			"id" : "GenerateReflection::@6890427a1f51a3e7e1df"
 		}
 	],
 	"paths" : 
