@@ -16,9 +16,9 @@
 class Mesh : public Component
 {
 public:
-    std::shared_ptr<Material> material;
+    Material material;
     string modelFilePath = "";
-    std::shared_ptr<MeshData> meshData;
+    MeshData meshData;
 
     Mesh() = default;
     Mesh(string filePath);

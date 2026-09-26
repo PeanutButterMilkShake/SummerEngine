@@ -4,5 +4,5 @@
 void UIImage::Start()
 {
     transform = GetComponent<RectTransform>();
-    meshData = ResourceManager::CreateResource<MeshData>("assets/Models/UIPlane.obj");
+    meshData = MeshData("assets/Models/UIPlane.obj");
 }

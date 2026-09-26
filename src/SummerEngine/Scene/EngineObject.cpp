@@ -38,23 +38,29 @@ EngineObject::~EngineObject()
 
 EngineObject* EngineObject::GetChildWithName(std::string childName)
 {
-    for(EngineObject* child : children)
+    for(Object* childObj : children)
     {
-        if(child->name == childName)
+        if (EngineObject* child = dynamic_cast<EngineObject*>(childObj))
         {
-            return child;
+            if(child->name == childName)
+            {
+                return child;
+            }
         }
     }
 
     return nullptr;
 }
 
-std::vector<EngineObject*>* GetChildrenRecursive(EngineObject* object, std::vector<EngineObject*>* descendants)
+std::vector<EngineObject*>* GetChildrenRecursive(Object* object, std::vector<EngineObject*>* descendants)
 {
-    descendants->insert(descendants->end(), object->children.begin(), object->children.end());
-    for(EngineObject* child : object->children)
+    for(Object* childObj : object->children)
     {
-        GetChildrenRecursive(child, descendants);
+        if (EngineObject* child = dynamic_cast<EngineObject*>(childObj))
+        {
+            descendants->push_back(child);
+            GetChildrenRecursive(child, descendants);
+        }
     }
 
     return descendants;

@@ -60,8 +60,8 @@ public:
             transform->sizeOffset = {0,0};
             
             // Add panel image
-            panelObject->AddComponent<UIImage>()->material = EngineUIColors::engineUIMaterials["PanelBackground"];
-            
+            panelObject->AddComponent<UIImage>()->material = Material("UI_PanelBackground");
+
             // Create tab ribbon
             EngineObject* tabRibbon = new EngineObject();
             tabRibbon->name = "Ribbon";
@@ -74,7 +74,7 @@ public:
             ribbonTransform->clipChildren = true;
 
             UIImage* ribbon = tabRibbon->AddComponent<UIImage>();
-            ribbon->material = EngineUIColors::engineUIMaterials["PanelRibbon"];
+            ribbon->material = Material("UI_PanelRibbon");
 
             tabRibbon->AddComponent<UIListLayout>()->paddingOffset.x = 2;
             UIScrollView* scrollView = tabRibbon->AddComponent<UIScrollView>();

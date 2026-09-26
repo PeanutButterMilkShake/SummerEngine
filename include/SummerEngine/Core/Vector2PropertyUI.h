@@ -38,7 +38,7 @@ public:
             propertyTransform->pivot = {0};
 
             UIImage* propertyBackground = propertyObject->AddComponent<UIImage>();
-            propertyBackground->material = EngineUIColors::engineUIMaterials["PanelRibbon"];
+            propertyBackground->material = Material("UI_PanelRibbon");
 
             UIButton* propertyButton = propertyObject->AddComponent<UIButton>();    
             UITextField* propertyTextField = propertyObject->AddComponent<UITextField>();
@@ -55,7 +55,7 @@ public:
             propertyTextTransform->pivot = {0};
             
             UIText* propertyText = propertyTextObject->AddComponent<UIText>();
-            propertyText->material = EngineUIColors::engineUIMaterials["TextBody"];
+            propertyText->material = Material("UI_TextBody");
             propertyText->fontFilePath = "assets/Fonts/JetBrainsMono-Regular.ttf";
             propertyText->verticalAlignment = UIAlignmentVertical::Center;
             propertyText->horizontalAlignment = UIAlignmentHorizontal::Left;

@@ -1,24 +1,9 @@
 #include "MaterialData.h"
 #include "Engine.h"
 
-Material::Material()
+void Material::Impl::ApplyMaterial()
 {
-
-}
-
-Material::Material(std::shared_ptr<Shader> _shader)
-{
-    shader = _shader;
-}
-
-Material::Material(std::string vertPath, std::string fragPath)
-{
-    shader = ResourceManager::CreateResource<Shader>(vertPath+fragPath, vertPath, fragPath);
-}
-
-void Material::ApplyMaterial()
-{
-    if(shader == nullptr)
+    if(!shader)
         assert("Please assign a shader before applying material");
 
     for(auto [name, property] : materialProperties)

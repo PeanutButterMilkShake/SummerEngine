@@ -26,9 +26,9 @@ private:
 
 public:
     RectTransform* transform = nullptr;
-    std::shared_ptr<MeshData> meshData = nullptr;
-    std::shared_ptr<Material> material = nullptr;
-    std::shared_ptr<Font> font = nullptr;
+    MeshData meshData;
+    Material material;
+    Font font;
 
     // Public properties
     std::string fontFilePath = "assets/Fonts/JetBrainsMono-Regular.ttf";

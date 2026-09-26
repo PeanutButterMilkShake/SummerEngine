@@ -17,7 +17,7 @@ void InspectorPanel::Init()
     inspectorPanel->content->enabled = true;
 
     inspectorPanel->content->GetComponent<RectTransform>()->sizeOffset = {0,-50};
-    inspectorPanel->content->GetComponent<RectTransform>()->positionOffset = {0,65};
+    inspectorPanel->content->GetComponent<RectTransform>()->positionOffset = {0,50};
     inspectorPanel->content->GetComponent<UIListLayout>()->paddingOffset = {0,5};
 
     EngineObject* tabRibbon = new EngineObject();
@@ -33,7 +33,7 @@ void InspectorPanel::Init()
     ribbonTransform->zOffset = -3;
 
     UIImage* ribbon = tabRibbon->AddComponent<UIImage>();
-    ribbon->material = EngineUIColors::engineUIMaterials["PanelForeground"];
+    ribbon->material = Material("UI_PanelForeground");
 
     EngineObject* nameTextObject = new EngineObject();
     nameTextObject->SetParent(tabRibbon);
@@ -45,7 +45,7 @@ void InspectorPanel::Init()
     nameTextTransform->positionOffset = {32, 0};
 
     nameText = nameTextObject->AddComponent<UIText>();
-    nameText->material = EngineUIColors::engineUIMaterials["TextBody"];
+    nameText->material = Material("UI_TextBody");
     nameText->fontFilePath = "assets/Fonts/JetBrainsMono-Regular.ttf";
     nameText->text = "";
     nameText->verticalAlignment = UIAlignmentVertical::Center;

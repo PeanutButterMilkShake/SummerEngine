@@ -7,7 +7,7 @@ EnginePanel::EnginePanel(std::string _title, std::string _category, Vector2 _def
     RectTransform* tabTransform = tabObject->AddComponent<RectTransform>();
     tabTransform->pivot = {0,0};
     tabTransform->sizeOffset = {140, 25};
-    tabObject->AddComponent<UIImage>()->material = EngineUIColors::engineUIMaterials["PanelForeground"];
+    tabObject->AddComponent<UIImage>()->material = Material("UI_PanelForeground");
     tabObject->AddComponent<UIButton>();
     tabObject->name = title + " tab";
 
@@ -21,8 +21,8 @@ EnginePanel::EnginePanel(std::string _title, std::string _category, Vector2 _def
     iconTransform->pivot = {0,0};
 
     UIImage* icon = tabIconObject->AddComponent<UIImage>();
-    icon->material = EngineUIColors::engineUIMaterials["Image"];
-    icon->texture = ResourceManager::CreateResource<Texture>(title  + " tab icon", iconPath);
+    icon->material = Material("Image");
+    icon->texture = Texture(iconPath);
 
     // Create title Text
     EngineObject* tabTextObject = new EngineObject();
@@ -36,7 +36,7 @@ EnginePanel::EnginePanel(std::string _title, std::string _category, Vector2 _def
     textTransform->positionScale = {.5,.5};
 
     UIText* tabText = tabTextObject->AddComponent<UIText>();
-    tabText->material = EngineUIColors::engineUIMaterials["TextBody"];
+    tabText->material = Material("UI_TextBody");
     tabText->fontFilePath = "assets/Fonts/JetBrainsMono-Regular.ttf";
     tabText->text = title;
     tabText->verticalAlignment = UIAlignmentVertical::Center;
@@ -63,6 +63,6 @@ EnginePanel::EnginePanel(std::string _title, std::string _category, Vector2 _def
     contentScrollView->scrollViewSize = {0,-2};
 
     content->name = title + " Content";
-
     content->enabled = false;
+    content->GetComponent<RectTransform>()->clipChildren = true;
 }

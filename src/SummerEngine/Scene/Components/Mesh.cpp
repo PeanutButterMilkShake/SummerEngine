@@ -38,5 +38,5 @@ glm::mat4 Mesh::GetModelMatrix()
 
 void Mesh::LoadMesh()
 {
-    meshData = ResourceManager::Get<MeshData>(modelFilePath);
+    meshData = MeshData(modelFilePath);
 }

@@ -40,23 +40,23 @@ private:
     };
 
 public:
-    inline static std::unordered_map<std::string, std::shared_ptr<Material>> engineUIMaterials;
-
     static void SetupMaterials()
     {
         for(const ColorData& data : colors)
         {
             if(data.name.find("Text") != std::string::npos)
             {
-                std::shared_ptr<Material> mat = ResourceManager::CreateResource<Material>(data.name, "assets/Shaders/Vertex/UIShader.vert", "assets/Shaders/Fragment/TextShader.frag");
+                std::shared_ptr<Material> mat = std::make_shared<Material>("assets/Shaders/TextShader.glsl");
                 mat->SetProperty("baseColor", data.col);
-                engineUIMaterials[data.name] = mat;
+
+                ResourceManager::AddToCache("UI_" + data.name, mat);
             }
             else
             {
-                std::shared_ptr<Material> mat = ResourceManager::CreateResource<Material>(data.name, "assets/Shaders/Vertex/UIShader.vert", "assets/Shaders/Fragment/UIShader.frag");
+                std::shared_ptr<Material> mat = std::make_shared<Material>("assets/Shaders/UIShader.glsl");
                 mat->SetProperty("baseColor", data.col);
-                engineUIMaterials[data.name] = mat;
+
+                ResourceManager::AddToCache("UI_" + data.name, mat);
             }
         }
     }

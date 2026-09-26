@@ -23,13 +23,13 @@ enum class CommandType
 
 struct RenderCommand {
     CommandType type;
-    std::shared_ptr<MeshData> mesh;
+    MeshData mesh;
     glm::mat4 transform;
-    std::shared_ptr<Material> material;
+    Material material;
 
-    // --- UI Specific Fields ---
-    std::shared_ptr<Texture> texture = nullptr;
-    std::shared_ptr<Font> font = nullptr;
+    // UI
+    Texture texture;
+    Font font;
     float fontWeight;
     int zOrder = 0;
     Vector2 minClipBounds = Vector2(0.0f, 0.0f);
@@ -45,11 +45,11 @@ public:
     static glm::mat4 viewProjectionMatrix;
     static glm::mat4 orthographicMatrix;
     static int lastShader;
-    static shared_ptr<MeshData> lastMesh;
-    static shared_ptr<Material> lastMaterial;
-    static std::shared_ptr<Texture> lastTexture;
+    static MeshData lastMesh;
+    static Material lastMaterial;
+    static Texture lastTexture;
     static float lastWeight;
-
+    
     static void Render();
 
 private:

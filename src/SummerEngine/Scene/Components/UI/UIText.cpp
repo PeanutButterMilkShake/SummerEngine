@@ -21,7 +21,7 @@ void UIText::Start()
 
     lastBoxSize = transform ? transform->GetAbsoluteSize() : Vector2(-1.0f, -1.0f);
 
-    font = ResourceManager::CreateResource<Font>(fontFilePath, fontFilePath, static_cast<int>(64));
+    font = Font(fontFilePath);
     GenerateTextMesh();
 }
 
@@ -42,7 +42,7 @@ void UIText::Update(float delta)
     if (needsFontReload)
     {
         lastFontPath = fontFilePath;
-        font = ResourceManager::CreateResource<Font>(fontFilePath, fontFilePath, static_cast<int>(fontSize));
+        font = Font(fontFilePath);
     }
 
     if (needsMeshRegen)
@@ -79,7 +79,7 @@ void UIText::GenerateTextMesh()
     float baseLineHeight = (fontSize * 1.2f) + linePadding;
 
     if (!meshData) {
-        meshData = std::make_shared<MeshData>();
+        meshData = MeshData();
     } else {
         meshData->vertices.clear();
         meshData->uvs.clear();

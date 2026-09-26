@@ -29,8 +29,6 @@ int main()
     Object* obj2 = new Object();
     obj2->name = "obj2";
 
-    engine.ResetTime();
-
     while (!glfwWindowShouldClose(engine.window))
     {
         glClearColor(0.01f, 0.00f, 0.02f, 1.0f);

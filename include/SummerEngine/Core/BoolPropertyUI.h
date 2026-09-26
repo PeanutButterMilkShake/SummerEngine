@@ -19,10 +19,10 @@ public:
         rowRect->pivot = {.5};
         
         UIImage* rowImage = row->AddComponent<UIImage>();
-        rowImage->material = EngineUIColors::engineUIMaterials["PanelBackground"];
+        rowImage->material = Material("UI_PanelBackground");
 
         UIText* propertyNameText = row->AddComponent<UIText>();
-        propertyNameText->material = EngineUIColors::engineUIMaterials["TextBody"];
+        propertyNameText->material = Material("UI_TextBody");
         propertyNameText->fontFilePath = "assets/Fonts/JetBrainsMono-Regular.ttf";
         propertyNameText->text = propertyName;
         propertyNameText->verticalAlignment = UIAlignmentVertical::Center;

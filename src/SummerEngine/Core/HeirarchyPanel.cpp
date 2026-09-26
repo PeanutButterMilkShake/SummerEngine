@@ -16,11 +16,11 @@ HierarchyPanel::HierarchyPanel()
 
 void HierarchyPanel::Init()
 {
+    objectIcon = Texture("Assets/Textures/Object.png");
+
     EnginePanel* heirarchyPanel = WorkspaceManager::RegisterPanel("Hierarchy", "Editor", PanelLocation::Left, "Assets/Textures/Hierarchy.png", true);
     heirarchyPanel->content->SetParent(WorkspaceManager::panels[PanelLocation::Left]);
-
     heirarchyPanel->content->enabled = true;
-    heirarchyPanel->content->SetParent(WorkspaceManager::panels[PanelLocation::Left]);
 
     sceneRootNode = CreateHeiarchyBranch("Scene");
     sceneRootNode->SetParent(heirarchyPanel->content);
@@ -51,7 +51,7 @@ EngineObject* HierarchyPanel::CreateHeiarchyBranch(Object* object, EngineObject*
     UIImage* branchImage = branch->AddComponent<UIImage>();
     
     bool isSelected = std::find(Engine::selectedObjects.begin(), Engine::selectedObjects.end(), object) != Engine::selectedObjects.end();
-    branchImage->material = isSelected ? EngineUIColors::engineUIMaterials["ButtonPress"] : EngineUIColors::engineUIMaterials["PanelBackground"];
+    branchImage->material = isSelected ? Material("UI_ButtonPress") : Material("UI_PanelBackground");
 
     instance->hierarchyNodeImages[object] = branchImage;
 
@@ -59,14 +59,14 @@ EngineObject* HierarchyPanel::CreateHeiarchyBranch(Object* object, EngineObject*
     {
         bool selected = std::find(Engine::selectedObjects.begin(), Engine::selectedObjects.end(), object) != Engine::selectedObjects.end();
         if(selected) return;
-        branchImage->material = EngineUIColors::engineUIMaterials["ButtonHighlight"];
+        branchImage->material = Material("UI_ButtonHighlight");
     });
 
     branchTransform->onMouseExit.AddListener([branchImage, object]()
     {
         bool selected = std::find(Engine::selectedObjects.begin(), Engine::selectedObjects.end(), object) != Engine::selectedObjects.end();
         if(selected) return;
-        branchImage->material = EngineUIColors::engineUIMaterials["PanelBackground"];
+        branchImage->material = Material("UI_PanelBackground");
     });
 
     branch->AddComponent<UIButton>()->OnMouse0ReleasedEvent.AddListener([object]()
@@ -88,7 +88,7 @@ EngineObject* HierarchyPanel::CreateHeiarchyBranch(Object* object, EngineObject*
     textTransform->positionScale = {0};
 
     UIText* tabText = textObject->AddComponent<UIText>();
-    tabText->material = EngineUIColors::engineUIMaterials["TextBody"];
+    tabText->material = Material("UI_TextBody");
     tabText->fontFilePath = "assets/Fonts/JetBrainsMono-Regular.ttf";
     tabText->text = object->name;
     tabText->verticalAlignment = UIAlignmentVertical::Center;
@@ -106,8 +106,8 @@ EngineObject* HierarchyPanel::CreateHeiarchyBranch(Object* object, EngineObject*
     iconTransform->positionScale = {0};
     
     UIImage* icon = iconObject->AddComponent<UIImage>();
-    icon->material = EngineUIColors::engineUIMaterials["Image"];
-    icon->texture = ResourceManager::CreateResource<Texture>("Object Icon", "Assets/Textures/Object.png");
+    icon->material = Material("UI_Image");
+    icon->texture = objectIcon;
 
     return branch;
 }
@@ -124,7 +124,7 @@ EngineObject* HierarchyPanel::CreateHeiarchyBranch(string name)
     branchTransform->pivot = {0.5, 0};
     
     UIImage* branchImage = branch->AddComponent<UIImage>();
-    branchImage->material = EngineUIColors::engineUIMaterials["PanelBackground"];
+    branchImage->material = Material("UI_PanelBackground");
 
     branch->AddComponent<UIButton>();
 
@@ -141,7 +141,7 @@ EngineObject* HierarchyPanel::CreateHeiarchyBranch(string name)
     textTransform->positionScale = {0};
 
     UIText* tabText = textObject->AddComponent<UIText>();
-    tabText->material = EngineUIColors::engineUIMaterials["TextBody"];
+    tabText->material = Material("UI_TextBody");
     tabText->fontFilePath = "assets/Fonts/JetBrainsMono-Regular.ttf";
     tabText->text = name;
     tabText->verticalAlignment = UIAlignmentVertical::Center;
@@ -177,11 +177,11 @@ void HierarchyPanel::UpdateSelectionVisuals()
         
         if (isSelected)
         {
-            img->material = EngineUIColors::engineUIMaterials["ButtonPress"];
+            img->material = Material("UI_ButtonPress");
         }
         else
         {
-            img->material = EngineUIColors::engineUIMaterials["PanelBackground"];
+            img->material = Material("UI_PanelBackground");
         }
     }
 }

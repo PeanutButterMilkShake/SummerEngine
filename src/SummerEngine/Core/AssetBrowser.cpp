@@ -25,6 +25,9 @@ AssetBrowser::AssetBrowser()
 
 void AssetBrowser::Init()
 {
+    fileIcon = Texture("Assets/Textures/FileBase.png");
+    folderIcon = Texture("Assets/Textures/FolderIcon.png");
+
     assetPanel = WorkspaceManager::RegisterPanel("Asset Browser", "Editor", PanelLocation::Bottom, "Assets/Textures/Inspector.png", true);
     assetPanel->content->SetParent(WorkspaceManager::panels[PanelLocation::Bottom]);
     assetPanel->content->enabled = true;
@@ -39,6 +42,11 @@ void AssetBrowser::Init()
 
 void AssetBrowser::Update()
 {
+    if(rebuild)
+    {
+        BuildAssets();
+    }
+
     if(refresh)
     {
         UpdateAssets();
@@ -53,6 +61,7 @@ std::vector<Asset> AssetBrowser::SearchFolder(std::string path)
     {
         Asset asset;
         asset.name = entry.path().filename().string();
+        asset.displayName = asset.name.substr(0, asset.name.find_last_of("."));
         asset.path = entry.path().string();
 
         if (entry.is_directory())
@@ -68,14 +77,14 @@ std::vector<Asset> AssetBrowser::SearchFolder(std::string path)
     }
 
     return assets;
-}
+} 
 
 EngineObject* AssetBrowser::BuildAssetButton(Asset& asset)
 {
-    std::shared_ptr<Texture> texture;
+    Texture texture = fileIcon;
     if(asset.type == AssetType::Folder)
     {
-        texture = ResourceManager::CreateResource<Texture>("FolderIcon", "Assets/Textures/FolderIcon.png");
+        texture = folderIcon;
     }
 
     EngineObject* assetObject = new EngineObject();
@@ -85,11 +94,11 @@ EngineObject* AssetBrowser::BuildAssetButton(Asset& asset)
     assetTransform->pivot = {0};
     
     UIImage* assetIcon = assetObject->AddComponent<UIImage>();
-    assetIcon->material = EngineUIColors::engineUIMaterials["Image"];
+    assetIcon->material = Material("UI_Image");
     assetIcon->texture = texture;
 
     UIImage* background = assetObject->AddComponent<UIImage>();
-    background->material = EngineUIColors::engineUIMaterials["PanelBackground"];
+    background->material = Material("UI_PanelBackground");
 
     UIButton* assetButton = assetObject->AddComponent<UIButton>();
     
@@ -102,12 +111,17 @@ EngineObject* AssetBrowser::BuildAssetButton(Asset& asset)
             this->selectedAsset = assetPtr;
             refresh = true;
         }
-        else
+        else if(assetPtr->type == AssetType::Folder)
         {
-            
+            if(Time::GetTime() - assetPtr->lastClickedTime < doubleClickTime)
+            {
+                this->currentPath = assetPtr->path;
+                this->selectedAsset = nullptr;
+                this->rebuild = true;
+            }
         }
 
-        assetPtr->lastClickedTime; // Make a Time.h: deltaTime, CalculateTime(), GetTime(), GetDoubleTime(),
+        assetPtr->lastClickedTime = Time::GetTime();
     });
 
     EngineObject* nameObject = new EngineObject();
@@ -121,10 +135,10 @@ EngineObject* AssetBrowser::BuildAssetButton(Asset& asset)
     nameTransform->pivot = {0,0};
 
     UIText* nameText = nameObject->AddComponent<UIText>();
-    nameText->material = EngineUIColors::engineUIMaterials["TextBody"];
+    nameText->material = Material("UI_TextBody");
     nameText->fontFilePath = "assets/Fonts/JetBrainsMono-Regular.ttf";
     nameText->fontSize = 17;
-    nameText->text = asset.name;
+    nameText->text = asset.displayName;
     nameText->horizontalAlignment = UIAlignmentHorizontal::Center;
     nameText->verticalAlignment = UIAlignmentVertical::Top;
 
@@ -148,11 +162,9 @@ void AssetBrowser::UpdateAssets()
         for(UIImage* image : assetObject->GetComponentsOfType<UIImage>())
         {
             // Background panel check (images without direct texture assigned)
-            if(image->texture == nullptr)
+            if(!image->texture)
             {
-                image->material = isSelected 
-                    ? EngineUIColors::engineUIMaterials["ButtonHighlight"] 
-                    : EngineUIColors::engineUIMaterials["PanelBackground"];
+                image->material = isSelected ? Material("UI_ButtonHighlight") : Material("UI_PanelBackground");
             }
         }
     }
@@ -164,9 +176,8 @@ void AssetBrowser::BuildAssets()
 {
     assetPanel->content->ClearChildren();
 
-    // Populate persistent member vector
     currentAssets = SearchFolder(currentPath);
-
+ 
     for(Asset& asset : currentAssets)
     {
         EngineObject* assetObject = BuildAssetButton(asset);
@@ -174,4 +185,6 @@ void AssetBrowser::BuildAssets()
 
         asset.object = assetObject;
     }
+
+    rebuild = false;
 }

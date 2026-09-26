@@ -6,6 +6,7 @@
 #include <vector>
 #include "UIText.h"
 #include "EnginePanel.h"
+#include "SETime.h"
 
 class Object;
 class EngineObject;
@@ -20,6 +21,7 @@ enum AssetType
 struct Asset
 {
     std::string name;
+    std::string displayName;
     AssetType type;
     std::string path;
     EngineObject* object;
@@ -43,8 +45,12 @@ public:
     EngineObject* BuildAssetButton(Asset& asset);
     void BuildAssets();
     void UpdateAssets();
+
 private:
+    Texture fileIcon;
+    Texture folderIcon;
     bool refresh = false;
+    bool rebuild = false;
     EnginePanel* assetPanel;
     std::string currentPath;
     Asset* selectedAsset;

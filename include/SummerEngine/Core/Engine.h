@@ -14,6 +14,7 @@
 #include "Input.h"
 #include "NetworkManager.h"
 #include "EngineUI.h"
+#include "SETime.h"
 
 class EngineObject;
 class Object;
@@ -27,8 +28,6 @@ public:
     static std::vector<EngineObject*> engineObjects;
     static std::vector<Object*> objects;
     static Camera* mainCamera;
-    static float delta;
-    static int fps;
     static std::vector<Light*> lights;
     static Vector2 windowDimensions;
     static EngineUI* engineUI;
@@ -71,8 +70,6 @@ public:
 
     void Initialize(string name);
     void Update();
-    void CalculateTimeData();
-    void ResetTime();
     static void ErrorCallback(int error, const char* description);
     static void WindowResizeCallback(GLFWwindow* window, int width, int height);
     static void APIENTRY OpenGLDebugCallback(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar* message, const void* userParam);

@@ -18,10 +18,10 @@ namespace ResourceManager
     }
 
     // Get resource from cache, create cache if not existing
-    template <typename T, typename... Args>
-    inline std::shared_ptr<T> CreateResource(const std::string& key, Args&&... args)
+    template <typename T>
+    inline std::shared_ptr<T> GetResource(const std::string& key)
     {
-        static_assert(std::is_base_of_v<Resource, T>, "ResourceManager::Get<T>() can only take valid resources");
+        static_assert(std::is_base_of_v<Resource, T>, "ResourceManager::GetResource<T>() can only take valid resources");
 
         auto& cache = GetCache<T>();
 
@@ -32,36 +32,25 @@ namespace ResourceManager
             return it->second;
         }
 
-        // Create resource if not existing
-        std::shared_ptr<T> resource;
+        return nullptr;
+    }
 
-        if constexpr (sizeof...(Args) == 0)
+    // Add resource to cache
+    template <typename T>
+    inline std::shared_ptr<T> AddToCache(const std::string& key, std::shared_ptr<T> resource)
+    {
+        static_assert(std::is_base_of_v<Resource, T>, "ResourceManager::AddToCache<T>() can only take valid resources");
+
+        auto& cache = GetCache<T>();
+
+        // Attempt to find resource
+        auto it = cache.find(key);
+        if (it != cache.end())
         {
-            resource = std::make_shared<T>(key);
-        }
-        else
-        {
-            resource = std::make_shared<T>(std::forward<Args>(args)...);
+            assert("Cache already has resource with key: " + key + "\n");
         }
 
         cache[key] = resource;
         return resource;
-    }
-
-    // Get resource from cache
-    template <typename T, typename... Args>
-    inline std::shared_ptr<T> Get(const std::string& key)
-    {
-        static_assert(std::is_base_of_v<Resource, T>, "ResourceManager::Get<T>() can only take valid resources");
-
-        auto& cache = GetCache<T>();
-
-        auto it = cache.find(key);
-        if (it != cache.end())
-        {
-            return it->second;
-        }
-        
-        return nullptr;
     }
 }

@@ -17,10 +17,10 @@ public:
         RectTransform* rowRect = rowObject->AddComponent<RectTransform>();
         rowRect->sizeScale = {1, 0};
         rowRect->sizeOffset = {0,25};
-        rowRect->pivot = {.5};
+        rowRect->pivot = {0.5,0};
         
         UIImage* rowImage = rowObject->AddComponent<UIImage>();
-        rowImage->material = EngineUIColors::engineUIMaterials["PanelBackground"];
+        rowImage->material = Material("UI_PanelBackground");
 
         EngineObject* nameObject = new EngineObject();
         nameObject->SetParent(rowObject);
@@ -32,7 +32,7 @@ public:
         nameTransform->pivot = {0};
 
         UIText* propertyNameText = nameObject->AddComponent<UIText>();
-        propertyNameText->material = EngineUIColors::engineUIMaterials["TextBody"];
+        propertyNameText->material = Material("UI_TextBody");
         propertyNameText->fontFilePath = "assets/Fonts/JetBrainsMono-Regular.ttf";
         propertyNameText->text = propertyName;
         propertyNameText->verticalAlignment = UIAlignmentVertical::Center;

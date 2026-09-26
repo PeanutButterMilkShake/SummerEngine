@@ -12,9 +12,9 @@ class UIImage : public Component
 {
 public:
     RectTransform* transform;
-    std::shared_ptr<Material> material;
-    std::shared_ptr<Texture> texture;   // per-instance texture, independent of the (possibly shared) material
-    std::shared_ptr<MeshData> meshData;
+    Material material;
+    Texture texture;
+    MeshData meshData;
     Color3 tint;
 
     void Start() override;

@@ -27,19 +27,19 @@ public:
 
     static std::string DemangleTypeName(const char* name)
     {
-    #ifdef __GNUG__
-        int status = -4;
-        // abi::__cxa_demangle allocates memory, so we must free it
-        char* demangled = abi::__cxa_demangle(name, nullptr, nullptr, &status);
-        if (status == 0 && demangled != nullptr)
-        {
-            std::string result(demangled);
-            std::free(demangled);
-            return result;
-        }
-    #endif
-        // Fallback if demangling fails or if using MSVC (which is already readable)
-        return name;
+        #ifdef __GNUG__
+            int status = -4;
+            // abi::__cxa_demangle allocates memory, so we must free it
+            char* demangled = abi::__cxa_demangle(name, nullptr, nullptr, &status);
+            if (status == 0 && demangled != nullptr)
+            {
+                std::string result(demangled);
+                std::free(demangled);
+                return result;
+            }
+        #endif
+            // Fallback if demangling fails or if using MSVC (which is already readable)
+            return name;
     }
 
     // Build UI
@@ -52,8 +52,8 @@ public:
             return it->second->BuildUI(propertyName, propertyValue, setPropertyValue);
         }
 
-    std::string readableName = DemangleTypeName(type.name());
-    printf("No BuildUI function for type: %s\n", readableName.c_str());
+        std::string readableName = DemangleTypeName(type.name());
+        printf("No BuildUI function for type: %s\n", readableName.c_str());
 
         return nullptr;
     }

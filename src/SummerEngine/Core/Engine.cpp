@@ -11,8 +11,6 @@ std::vector<Object*> Engine::objects;
 std::vector<EngineObject*> Engine::engineObjects;
 std::vector<Light*> Engine::lights;
 Camera* Engine::mainCamera = nullptr;
-float Engine::delta;
-int Engine::fps;
 Vector2 Engine::windowDimensions = Vector2(960, 600);
 GLuint Engine::whiteTextureId = 0;
 EngineUI* Engine::engineUI = nullptr;
@@ -32,19 +30,19 @@ Engine::~Engine()
 
 void APIENTRY Engine::OpenGLDebugCallback(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar* message, const void* userParam)
 {
-if (severity == GL_DEBUG_SEVERITY_NOTIFICATION) return;
+    if (severity == GL_DEBUG_SEVERITY_NOTIFICATION) return;
 
-std::cerr << "\nOPENGL ERROR" << std::endl;
-std::cerr << "Message: " << message << std::endl;
+    std::cerr << "\nOPENGL ERROR" << std::endl;
+    std::cerr << "Message: " << message << std::endl;
 
-switch (type) {
-    case GL_DEBUG_TYPE_ERROR:               std::cerr << "Type: Error"; break;
-    case GL_DEBUG_TYPE_DEPRECATED_BEHAVIOR: std::cerr << "Type: Deprecated Behavior"; break;
-    case GL_DEBUG_TYPE_UNDEFINED_BEHAVIOR:  std::cerr << "Type: Undefined Behavior"; break;
-    case GL_DEBUG_TYPE_PORTABILITY:         std::cerr << "Type: Portability Issue"; break;
-    case GL_DEBUG_TYPE_PERFORMANCE:         std::cerr << "Type: Performance Warning"; break;
-    default:                                std::cerr << "Type: Other"; break;
-}
+    switch (type) {
+        case GL_DEBUG_TYPE_ERROR:               std::cerr << "Type: Error"; break;
+        case GL_DEBUG_TYPE_DEPRECATED_BEHAVIOR: std::cerr << "Type: Deprecated Behavior"; break;
+        case GL_DEBUG_TYPE_UNDEFINED_BEHAVIOR:  std::cerr << "Type: Undefined Behavior"; break;
+        case GL_DEBUG_TYPE_PORTABILITY:         std::cerr << "Type: Portability Issue"; break;
+        case GL_DEBUG_TYPE_PERFORMANCE:         std::cerr << "Type: Performance Warning"; break;
+        default:                                std::cerr << "Type: Other"; break;
+    }
 }
 
 void Engine::Initialize(string name)
@@ -96,6 +94,8 @@ void Engine::Initialize(string name)
     Input::window = window;
     Input::SetupInputCallbacks();
 
+    Time::window = window;
+
     // TEMP CHANGE WHEN ENGINE UI STUFF
     glGenTextures(1, &whiteTextureId);
     glBindTexture(GL_TEXTURE_2D, whiteTextureId);
@@ -107,51 +107,23 @@ void Engine::Initialize(string name)
     engineUI = new EngineUI();
 }
 
-void Engine::CalculateTimeData()
-{
-    float currentFrame = static_cast<float>(glfwGetTime());
-    delta = currentFrame - lastFrame;
-    lastFrame = currentFrame;
-
-    static float fpsTimer = 0.0f;
-    static int frameCount = 0;
-
-    fpsTimer += delta;
-    frameCount++;
-
-    if (fpsTimer >= 1.0f)
-    {
-        fps = frameCount;
-        frameCount = 0;
-        fpsTimer = 0.0f;
-
-        std::string title = "Engine | FPS: " + std::to_string(fps);
-        glfwSetWindowTitle(window, title.c_str());
-    } 
-}
-
-void Engine::ResetTime()
-{
-    lastFrame = static_cast<float>(glfwGetTime());
-}
-
 void Engine::Update()
 {
-    CalculateTimeData();
+    Time::Update();
     engineUI->Update();
 
     for (size_t i = 0; i < Engine::objects.size(); ++i)
     {
         Object* object = Engine::objects[i];
         if (object != nullptr && object->enabled)
-            object->Update(delta);
+            object->Update(Time::deltaTime);
     }
 
     for (size_t i = 0; i < Engine::engineObjects.size(); ++i)
     {
         EngineObject* object = Engine::engineObjects[i];
         if (object != nullptr && object->enabled)
-            object->Update(delta);
+            object->Update(Time::deltaTime);
     }
 
     Input::Update();

@@ -9,9 +9,9 @@ std::vector<RenderCommand> Renderer::renderQueue;
 glm::mat4 Renderer::viewProjectionMatrix;
 glm::mat4 Renderer::orthographicMatrix;
 int Renderer::lastShader = -1;
-shared_ptr<MeshData> Renderer::lastMesh = nullptr;
-shared_ptr<Material> Renderer::lastMaterial = nullptr;
-shared_ptr<Texture> Renderer::lastTexture = nullptr;
+MeshData Renderer::lastMesh = nullptr;
+Material Renderer::lastMaterial = nullptr;
+Texture Renderer::lastTexture = nullptr;
 float Renderer::lastWeight = 0;
 
 void Renderer::Render()
@@ -382,15 +382,15 @@ void Renderer::SortQueue()
         }
         if(a.material != b.material)
         {
-            return a.material.get() < b.material.get();
+            return a.material < b.material;
         }
-        return a.mesh.get() < b.mesh.get(); 
+        return a.mesh < b.mesh;
     });
 
     std::stable_sort(it, renderQueue.end(), [](const RenderCommand& a, const RenderCommand& b) {
         if (a.zOrder != b.zOrder)
             return a.zOrder < b.zOrder;
 
-        return a.texture.get() < b.texture.get();
+        return a.texture < b.texture;
     });
 }

@@ -3,6 +3,7 @@
 #include "PanelContent.h"
 #include <string>
 #include <unordered_map>
+#include <memory>
 
 class Object;
 class EngineObject;
@@ -26,6 +27,7 @@ private:
     EngineObject* CreateHeiarchyBranch(std::string name);
     void UpdateObjectHeiarchy(Object* object, EngineObject* parent, float indent);
 
+    Texture objectIcon;
     EngineObject* sceneRootNode = nullptr;
     std::unordered_map<Object*, UIImage*> hierarchyNodeImages;
 };
